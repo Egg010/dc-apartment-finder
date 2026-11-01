@@ -138,10 +138,9 @@ def apartments_dot_com_units(text: str, building: str, url: str) -> list[dict[st
     """
     flat = re.sub(r"\s+", " ", text.replace("\u00a0", " "))
     headers = list(re.finditer(
-        r"(?P<name>[A-Za-z0-9 \-+,]{2,75}?)\s+"
-        r"(?:Starting at\s+)?\$[\d,]+\s+"
         r"(?P<kind>Studio|1 Bed|2 Beds)\s+\d+\s+Baths?\s+"
-        r"[\d,]+(?:\s*[-–]\s*[\d,]+)?\s+Sq Ft\s+View",
+        r"[\d,]+(?:\s*[-–]\s*[\d,]+)?\s+Sq Ft\s+View\s+"
+        r"(?P<name>.{1,90}?)\s+Floor Plan Details",
         flat, re.I,
     ))
     rows = re.compile(
