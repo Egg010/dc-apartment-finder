@@ -300,7 +300,7 @@ def compute_alerts(prior: dict[str, Any], units: list[dict[str, Any]],
                     "observedAt": when, "sourceUrl": u["sourceUrl"],
                     "note": "Advertised price changed for same unit; confirm fees and February start.",
                 })
-        elif u["building"] in seen_buildings and u.get("availableDate") != "2027-02-16":
+        elif u["building"] in seen_buildings and (not u.get("availableDate") or u["availableDate"] <= TARGET):
             alerts.append({
                 "kind": "new-advertised-unit", "building": u["building"],
                 "unit": u["unit"], "plan": u.get("plan"),
