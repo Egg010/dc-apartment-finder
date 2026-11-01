@@ -261,6 +261,56 @@ def update_history(existing: dict[str, Any], units: list[dict[str, Any]], when: 
             "note": "Plan-level offers are NOT identical-unit repeat sales. Compare cautious like-for-like published prices only."}
 
 
+
+def compute_alerts(prior: dict[str, Any], units: list[dict[str, Any]],
+                   when: str) -> list[dict[str, Any]]:
+    """Only exact named 1BR units, not plan-level mixes, can trigger alerts.
+
+    Initial baseline does not alert, and availability before the target date
+    is not treated as an approved February lease start.
+    """
+    previous = prior.get("observations", [])
+    if not isinstance(previous, list) or not previous:
+        return []
+    old_by_unit: dict[tuple, dict[str, Any]] = {}
+    for row in previous:
+        if not isinstance(row, dict) or not row.get("unit"):
+            continue
+        k = (row.get("building"), row.get("unit"), row.get("priceBasis"))
+        if k not in old_by_unit or row.get("observedAt", "") > old_by_unit[k].get("observedAt", ""):
+            old_by_unit[k] = row
+    seen_buildings = {r.get("building") for r in previous}
+    alerts = []
+    for u in units:
+        if not u.get("unit") or u.get("bedrooms") != 1:
+            continue
+        price = u.get("totalRent") if u.get("totalRent") is not None else u.get("baseRent")
+        if price is None or price > 2200:
+            continue
+        k = (u["building"], u["unit"], u.get("priceBasis"))
+        older = old_by_unit.get(k)
+        if older and older.get("price") is not None:
+            change = price - older["price"]
+            if change <= -75:
+                alerts.append({
+                    "kind": "unit-price-drop", "building": u["building"],
+                    "unit": u["unit"], "plan": u.get("plan"),
+                    "price": price, "previousPrice": older["price"],
+                    "change": change, "priceBasis": u.get("priceBasis"),
+                    "observedAt": when, "sourceUrl": u["sourceUrl"],
+                    "note": "Advertised price changed for same unit; confirm fees and February start.",
+                })
+        elif u["building"] in seen_buildings and u.get("availableDate") != "2027-02-16":
+            alerts.append({
+                "kind": "new-advertised-unit", "building": u["building"],
+                "unit": u["unit"], "plan": u.get("plan"),
+                "price": price, "priceBasis": u.get("priceBasis"),
+                "observedAt": when, "sourceUrl": u["sourceUrl"],
+                "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible.",
+            })
+    return alerts[:20]
+
+
 def safe_read_json(path: Path, default: dict[str, Any]) -> dict[str, Any]:
     if not path.exists():
         return default
@@ -318,13 +368,16 @@ def main() -> None:
                                     encoding="utf-8")
     history_path = dest / "history.json"
     prior = safe_read_json(history_path, {"observations": []})
+    alerts = compute_alerts(prior, units, now)
     history = update_history(prior, units, now)
     history_path.write_text(json.dumps(history, indent=2, ensure_ascii=False) + "\n",
                             encoding="utf-8")
+    (dest / "alerts.json").write_text(json.dumps({"generated": now, "events": alerts}, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     summaries = sum(record["result"] == "summary-only" for record in records)
     print(f"Checked {len(records)} buildings; {len(units)} plan-level offers; "
           f"{summaries} building-level price summaries; "
           f"history {len(history['observations'])} observations; "
+          f"{len(alerts)} new alerts; "
           f"February 7 confirmed: 0.")
 
 
