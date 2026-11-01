@@ -273,6 +273,7 @@ svg text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sa
   </div>
 
 <section class="card" style="padding:14px;margin-bottom:14px"><h2 style="font-size:18px;margin:0 0 6px">Market research · Nov 1, 2026</h2><p class="pnote">Eight priority buildings checked using official sites and rental listing pages. Cached results are explicitly labeled. Advertised November units are not guaranteed for February 7, 2027; older unverified prices elsewhere on the map retain their source dates.</p><div class="cmpwrap"><table class="cmp"><thead><tr><th>Building</th><th>Observed price</th><th>Evidence and limitations</th><th>Source</th></tr></thead><tbody id="refreshRows"></tbody></table></div></section>
+<section class="card" style="padding:14px;margin-bottom:14px" aria-label="February 2027 apartment availability"><h2 style="font-size:18px;margin:0 0 6px">February 7, 2027 · availability watch</h2><p class="pnote">A unit available earlier is not a confirmed February 7 move-in. Verify the exact lease start, parking, required fees, and lease length with leasing.</p><div id="dailyContent">Daily source checks have not been deployed yet.</div></section>
   <div class="timeline" id="timeline" role="note"></div>
   <div class="notice" role="note"><b>How to read prices:</b> <span class="ptype t">TOTAL</span> includes required monthly fees; <span class="ptype b">BASE</span> (marked *) is rent only, fees extra. No price includes parking ($225–300/mo); with parking, most 1BRs here go over $2,200, and the “+ parking” column on each building shows where it lands.</div>
   <div class="grid">
@@ -693,6 +694,33 @@ svg text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sa
     if (!live || !live.buildings) return;
     d.listings.forEach(function(l){ l.live = live.buildings[l.name] || null; });
   }
+  function drawDaily(){
+    var b=$("dailyContent");if(!b)return;b.textContent="";
+    var v=data&&data.daily;
+    if(!v){b.textContent="Daily feed pending: set Pages source to GitHub Actions and run refresh workflow.";return;}
+    var p=document.createElement("p");p.className="pnote";p.textContent="Checked "+new Date(v.generated).toLocaleString("en-US")+". February 7 confirmed: "+(v.feb7ConfirmedCount||0)+". A page responding successfully does not mean its pricing was verified.";b.appendChild(p);
+    var cs=v.checks||[];var counts={};
+    cs.forEach(function(c){counts[c.result]=(counts[c.result]||0)+1;});
+    var q=document.createElement("p");q.className="pnote";q.textContent=Object.keys(counts).map(function(k){return k+": "+counts[k];}).join(" · ");b.appendChild(q);
+    if(v.units&&v.units.length){
+      var h=document.createElement("h3");h.style.fontSize="15px";h.textContent="Official floor-plan offers seen (not Feb 7 confirmations)";b.appendChild(h);
+      var wrap=document.createElement("div");wrap.className="cmpwrap";
+      var t=document.createElement("table");t.className="cmp";t.style.minWidth="650px";
+      var thead=document.createElement("thead"),hr=document.createElement("tr");
+      ["Building","Plan","Beds","Size","Base rent","Advertised availability","Feb 7 confirmed"].forEach(function(s){var th=document.createElement("th");th.textContent=s;hr.appendChild(th);});
+      thead.appendChild(hr);t.appendChild(thead);var tb=document.createElement("tbody");
+      v.units.forEach(function(u){var tr=document.createElement("tr");
+        ["The Hale",u.plan,u.bedrooms===0?"Studio":"1BR",u.sqft+" sq ft",money(u.baseRent),u.availability,"No — contact leasing"].forEach(function(s){var td=document.createElement("td");td.textContent=s;tr.appendChild(td);});tb.appendChild(tr);});
+      t.appendChild(tb);wrap.appendChild(t);b.appendChild(wrap);
+    }
+    var det=document.createElement("details");det.style.marginTop="10px";var sm=document.createElement("summary");sm.textContent="View all 25 source-check results";det.appendChild(sm);
+    var list=document.createElement("ul");list.style.paddingLeft="18px";
+    cs.forEach(function(c){var li=document.createElement("li");li.style.margin="5px 0";
+      li.appendChild(document.createTextNode(c.name+": "+c.result+(c.note?" — "+c.note:"")));
+      if(c.sourceUrl){li.appendChild(document.createTextNode(" · "));li.appendChild(a(c.sourceUrl,"Source",""));}
+      list.appendChild(li);
+    });det.appendChild(list);b.appendChild(det);
+  }
   function drawOthers(){
     var box=$("others"); if (!box) return; box.textContent="";
     var lv=data&&data.live; if (!lv || !lv.otherListings || !lv.otherListings.length) return;
@@ -898,7 +926,7 @@ svg text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sa
   }
   window.addEventListener("hashchange", openFromHash);
   function revealDetail(){ if (window.innerWidth <= 860) $("detail").scrollIntoView({behavior:motion(),block:"start"}); }
-  function render(){ drawMap(); drawDetail(); if (data){ drawList(); drawStats(); drawTimeline(); drawCompare(); drawOthers(); drawRefresh(); } }
+  function render(){ drawMap(); drawDetail(); if (data){ drawList(); drawStats(); drawTimeline(); drawCompare(); drawOthers(); drawRefresh(); drawDaily(); } }
   function drawTimeline(){
     var box=$("timeline"); box.textContent=""; if (!data || !data.plan) { box.style.display="none"; return; }
     box.style.display="";
@@ -1029,6 +1057,9 @@ svg text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sa
   }
   render();
   loaded(EMBEDDED);
+  fetch("data/live.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw Error("HTTP "+r.status);return r.json();})
+    .then(function(v){data.daily=v;drawDaily();})
+    .catch(function(e){var b=$("dailyContent");if(b)b.textContent="Automated feed pending ("+e.message+"). Enable GitHub Actions as Pages source and run the daily refresh workflow.";});
 })();
 </script>
 </body>
