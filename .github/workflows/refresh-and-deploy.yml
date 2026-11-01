@@ -47,7 +47,22 @@ jobs:
           git add data/live.json data/history.json data/alerts.json
           if ! git diff --cached --quiet; then
             git commit -m "data: daily apartment availability observations [skip ci]"
-            git push origin HEAD:main
+            ARCHIVED=false
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then
+                ARCHIVED=true
+                break
+              fi
+              echo "Main changed while checking apartments; rebasing dated data (attempt $attempt)."
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort || true
+                break
+              fi
+            done
+            if [ "$ARCHIVED" != true ]; then
+              echo "::warning::Could not archive history in Git on this run; deploying the generated JSON anyway."
+            fi
           fi
       - name: Publish new unit/price leads as GitHub Issues
         continue-on-error: true
