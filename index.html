@@ -300,7 +300,7 @@ svg text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sa
   </div>
 
 
-  <section id="jamieCommute" class="dc-panel" aria-label="Jamie to apartment commute comparison"></section>
+  <section id="jamieCommute" class="dc-panel" aria-label="Average Metro travel times from Jamie"></section>
   <section id="leasingActionBoard" class="dc-panel" aria-label="Leasing outreach and unit-specific quote requests"></section>
 <section class="card" style="padding:14px;margin-bottom:14px"><h2 style="font-size:18px;margin:0 0 6px">Market research · Nov 1, 2026</h2><p class="pnote">Eight priority buildings checked using official sites and rental listing pages. Cached results are explicitly labeled. Advertised November units are not guaranteed for February 7, 2027; older unverified prices elsewhere on the map retain their source dates.</p><div class="cmpwrap"><table class="cmp"><thead><tr><th>Building</th><th>Observed price</th><th>Evidence and limitations</th><th>Source</th></tr></thead><tbody id="refreshRows"></tbody></table></div></section>
 <section class="card" style="padding:14px;margin-bottom:14px" aria-label="February 2027 apartment availability"><h2 style="font-size:18px;margin:0 0 6px">February 7, 2027 · availability watch</h2><p class="pnote">A unit available earlier is not a confirmed February 7 move-in. Verify the exact lease start, parking, required fees, and lease length with leasing.</p><div id="dailyContent">Daily source checks have not been deployed yet.</div></section>
@@ -1087,6 +1087,64 @@ svg text{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sa
 </script>
 <script src="enhancements.js" defer></script>
 <script src="leasing.js" defer></script>
-<script src="jamie-commute.js" defer></script>
+<script id="jamie-average-commute-v2">
+/* Simple planning-only average Metro commute from Jamie's Otis Place area.
+   No address input, browser storage, external route links or geolocation.
+   Estimates combine approximate walk to Georgia Ave-Petworth, train travel,
+   typical waiting/transfer allowance and the building's nearby-station walk.
+   They are NOT live transit data or measured trip durations. */
+(function(){
+  "use strict";
+  var root=document.getElementById("jamieCommute");
+  if(!root||!window.DCApartment)return;
+  var data=window.DCApartment.getData();
+  if(!data||!Array.isArray(data.listings))return;
+  function node(tag,parent,text,cls){
+    var e=document.createElement(tag);
+    if(cls)e.className=cls;
+    if(text!=null)e.textContent=String(text);
+    if(parent)parent.appendChild(e);
+    return e;
+  }
+  function averageMinutes(l){
+    var station=String(l.nearStation||l.redStation||"").toLowerCase();
+    var train;
+    if(station.includes("u street"))train=5;
+    else if(station.includes("shaw-howard"))train=7;
+    else if(station.includes("mt vernon"))train=9;
+    else if(station.includes("gallery"))train=11;
+    else if(station.includes("judiciary"))train=19;
+    else if(station.includes("union station"))train=21;
+    else if(station.includes("noma"))train=24;
+    else if(station.includes("rhode island"))train=28;
+    else train=23;
+    var finalWalk=Number.isFinite(l.nearWalkMin)?l.nearWalkMin:
+      Number.isFinite(l.redWalkMin)?l.redWalkMin:8;
+    return Math.round(10+train+5+finalWalk+1);
+  }
+  root.replaceChildren();
+  var header=node("div",root,null,"dc-head");
+  node("h2",header,"Jamie's average Metro commute");
+  node("p",root,"From the Otis Pl NW area to each apartment, including walking, typical train waiting and transfers. Approximate planning estimates, not live Metro times.","dc-note");
+  var wrap=node("div",root,null,"dc-scroll");
+  var table=node("table",wrap,null,"dc-data-table");
+  var thead=node("thead",table);
+  var hr=node("tr",thead);
+  ["Apartment","Average Metro commute"].forEach(function(label){node("th",hr,label)});
+  var tbody=node("tbody",table);
+  var buildings=data.listings.map(function(l){
+    return {name:l.name,minutes:averageMinutes(l)};
+  }).sort(function(a,b){return a.minutes-b.minutes||a.name.localeCompare(b.name)});
+  buildings.forEach(function(b){
+    var tr=node("tr",tbody);
+    node("td",tr,b.name);
+    var td=node("td",tr);
+    var strong=node("strong",td,"≈ "+b.minutes+" min");
+    strong.style.fontSize="15px";
+  });
+  node("p",root,"Times may vary with service frequency, route choice and walking pace. Check a transit journey planner before scheduling a visit.","dc-small");
+})();
+
+</script>
 </body>
 </html>
