@@ -25,6 +25,33 @@ function link(parent,origin,l,mode,label){
  a.href=googleRoute(origin,l,mode);a.target="_blank";a.rel="noopener noreferrer";
  a.setAttribute("aria-label",label+" route from Jamie to "+l.name+" in Google Maps");return a;
 }
+
+/* Conservative estimated rail durations from Georgia Ave-Petworth:
+   Green to U St/Shaw/Mt Vernon, or Green -> Red transfer at Gallery Place
+   (occasionally an alternate transfer at Fort Totten may be convenient).
+   Times are ranges with allowance for waiting and transfer variability.
+   They are NOT Google Maps ETA or real-time WMATA data. */
+function estimate(l){
+ var station=(l.nearStation||l.redStation||"").toLowerCase();
+ var rail,transfer=false;
+ if(station.includes("u street"))rail=5;
+ else if(station.includes("shaw-howard"))rail=7;
+ else if(station.includes("mt vernon"))rail=9;
+ else if(station.includes("gallery"))rail=11;
+ else if(station.includes("judiciary")){rail=19;transfer=true;}
+ else if(station.includes("union station")){rail=21;transfer=true;}
+ else if(station.includes("noma")){rail=24;transfer=true;}
+ else if(station.includes("rhode island")){rail=28;transfer=true;}
+ else {rail=23;transfer=true;}
+ var destWalk=Number.isFinite(l.nearWalkMin)?l.nearWalkMin:
+   Number.isFinite(l.redWalkMin)?l.redWalkMin:8;
+ var startWalk=10; // Origin neighborhood estimate, not measured doorway route
+ var platformWait=5; // Indicative, not live schedule
+ var low=startWalk+rail+destWalk+platformWait-5;
+ var high=startWalk+rail+destWalk+platformWait+7;
+ return {low:low,high:high,walk:destWalk,station:l.nearStation||l.redStation||"Metro",transfer:transfer};
+}
+
 function render(){
  clear(root);
  var origin=localGet(SOURCE_KEY);
@@ -33,7 +60,7 @@ function render(){
  var bar=element("div",root,null,"dc-head");
  element("h2",bar,"Jamie's commute to your apartment");
  element("span",bar,"Jamie → apartment","dc-status");
- element("p",root,"Compare Jamie's trip to every apartment. Directions open Google Maps for actual drive, transit, or walking routes; this page does not make up traffic-dependent travel times.","dc-note");
+ element("p",root,"Approximate total time by Metro from Jamie's area to each apartment, including walking, train waiting and transfers. These are planning estimates, not live schedules. Open Google Maps for an exact trip.","dc-note");
  var fields=element("div",root,null,"dc-form");
  var label=element("label",fields,null,"dc-field");
  element("span",label,"Jamie's starting address (saved only in this browser)");
@@ -61,28 +88,35 @@ function render(){
  var tripOrigin=isExact?origin.trim():FALLBACK_AREA;
  var all=app.getData().listings.slice();
  all.sort(function(a,b){var aRank=a.status==="top"?0:a.status==="consider"?1:2,bRank=b.status==="top"?0:b.status==="consider"?1:2;return aRank-bRank||a.name.localeCompare(b.name)});
+ all.sort(function(a,b){return estimate(a).low-estimate(b).low});
  var visible=expanded?all:all.slice(0,8);
  var wrap=element("div",root,null,"dc-scroll");
  var table=element("table",wrap,null,"dc-data-table");
  var head=element("tr",element("thead",table));
- ["Apartment","Area","Metro walk¹","Jamie → apartment"].forEach(function(n){element("th",head,n)});
+ ["Apartment","Total Metro time","Route","Directions"].forEach(function(n){element("th",head,n)});
  var tbody=element("tbody",table);
  visible.forEach(function(l){
   var tr=element("tr",tbody);
   var td=element("td",tr);
   element("strong",td,l.name);
   element("div",td,fmtDest(l),"dc-small");
-  element("td",tr,l.hood||l.area||"Washington DC");
-  element("td",tr,l.redWalkMin!=null?l.redWalkMin+" min to Red Line":"Not verified");
+  var e=estimate(l);
+  var time=element("td",tr);
+  var strong=element("strong",time,e.low+"–"+e.high+" min");
+  strong.style.fontSize="16px";
+  element("p",time,"Door-to-door estimate","dc-small");
+  var route=element("td",tr);
+  element("strong",route,"Georgia Ave-Petworth → "+e.station);
+  element("p",route,(e.transfer?"Green → Red; transfer required":"Green Line; no transfer")+" · "+e.walk+" min final walk (approx.)","dc-small");
   td=element("td",tr);
-  link(td,tripOrigin,l,mode,mode==="transit"?"Check transit":"View route");
+  link(td,tripOrigin,l,mode,mode==="transit"?"Check exact trip":"View route");
   if(mode!=="transit")link(td,tripOrigin,l,"transit","Transit");
   if(mode!=="driving")link(td,tripOrigin,l,"driving","Drive");
  });
  var foot=element("div",root,null,"dc-actions");
  var toggle=element("button",foot,expanded?"Show top apartments":"Show all "+all.length+" apartments","dc-btn");
  toggle.type="button";toggle.addEventListener("click",function(){localSet(COLLAPSE_KEY,expanded?"no":"yes");render()});
- var date=element("p",root,"¹ Red Line walk times are existing map estimates; they're not Jamie-to-apartment trip times. Google Maps calculates route time and service for the chosen mode. If you choose transit, the trip may use the Green/Yellow and Red Lines or a bus connection.","dc-small");
+ var date=element("p",root,"Estimated duration uses roughly 10 minutes walking to Georgia Ave–Petworth, Green Line travel, an optional Red Line transfer, typical wait allowance, and the map's estimated final walk. Real trip time depends on exact starting point, service, route choice and departure time.","dc-small");
 }
 render();
 })();
