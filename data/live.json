@@ -1,0 +1,376 @@
+{
+  "generated": "2026-11-01T15:45:17+00:00",
+  "targetMoveIn": "2027-02-07",
+  "source": "Daily direct-page checks with conservative parsing",
+  "feb7ConfirmedCount": 0,
+  "units": [
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "S1",
+      "bedrooms": 0,
+      "sqft": 390,
+      "baseRent": 1895,
+      "totalRent": null,
+      "priceBasis": "base",
+      "availableDate": null,
+      "availability": "1 Available Now",
+      "availabilityPrecision": "now",
+      "feb7Confirmed": false,
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceType": "official-floor-plan",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A5",
+      "bedrooms": 1,
+      "sqft": 549,
+      "baseRent": 2218,
+      "totalRent": null,
+      "priceBasis": "base",
+      "availableDate": null,
+      "availability": "2 Available Now",
+      "availabilityPrecision": "now",
+      "feb7Confirmed": false,
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceType": "official-floor-plan",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A2",
+      "bedrooms": 1,
+      "sqft": 529,
+      "baseRent": 2358,
+      "totalRent": null,
+      "priceBasis": "base",
+      "availableDate": null,
+      "availability": "2 Available Now",
+      "availabilityPrecision": "now",
+      "feb7Confirmed": false,
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceType": "official-floor-plan",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A12",
+      "bedrooms": 1,
+      "sqft": 626,
+      "baseRent": 2458,
+      "totalRent": null,
+      "priceBasis": "base",
+      "availableDate": null,
+      "availability": "1 Available Now",
+      "availabilityPrecision": "now",
+      "feb7Confirmed": false,
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceType": "official-floor-plan",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A8",
+      "bedrooms": 1,
+      "sqft": 598,
+      "baseRent": 3137,
+      "totalRent": null,
+      "priceBasis": "base",
+      "availableDate": null,
+      "availability": "1 Available Now",
+      "availabilityPrecision": "now",
+      "feb7Confirmed": false,
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceType": "official-floor-plan",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "S3",
+      "bedrooms": 0,
+      "sqft": 462,
+      "baseRent": 1990,
+      "totalRent": null,
+      "priceBasis": "base",
+      "availableDate": null,
+      "availability": "1 available 12.2026",
+      "availabilityPrecision": "month",
+      "feb7Confirmed": false,
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceType": "official-floor-plan",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A1",
+      "bedrooms": 1,
+      "sqft": 489,
+      "baseRent": 2098,
+      "totalRent": null,
+      "priceBasis": "base",
+      "availableDate": null,
+      "availability": "1 available 11.2026",
+      "availabilityPrecision": "month",
+      "feb7Confirmed": false,
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceType": "official-floor-plan",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "S2",
+      "bedrooms": 0,
+      "sqft": 444,
+      "baseRent": 2125,
+      "totalRent": null,
+      "priceBasis": "base",
+      "availableDate": null,
+      "availability": "1 available 12.2026",
+      "availabilityPrecision": "month",
+      "feb7Confirmed": false,
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceType": "official-floor-plan",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A10",
+      "bedrooms": 1,
+      "sqft": 613,
+      "baseRent": 2298,
+      "totalRent": null,
+      "priceBasis": "base",
+      "availableDate": null,
+      "availability": "1 available 12.2026",
+      "availabilityPrecision": "month",
+      "feb7Confirmed": false,
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceType": "official-floor-plan",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A4",
+      "bedrooms": 1,
+      "sqft": 562,
+      "baseRent": 2428,
+      "totalRent": null,
+      "priceBasis": "base",
+      "availableDate": null,
+      "availability": "1 available 11.2026",
+      "availabilityPrecision": "month",
+      "feb7Confirmed": false,
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceType": "official-floor-plan",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A9",
+      "bedrooms": 1,
+      "sqft": 600,
+      "baseRent": 2433,
+      "totalRent": null,
+      "priceBasis": "base",
+      "availableDate": null,
+      "availability": "1 available 11.2026",
+      "availabilityPrecision": "month",
+      "feb7Confirmed": false,
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceType": "official-floor-plan",
+      "sourceConfidence": "plan-price-only"
+    }
+  ],
+  "checks": [
+    {
+      "name": "The Belgard",
+      "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
+      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "result": "summary-only",
+      "summary": {
+        "oneBrCount": 8,
+        "oneBrStartingTotal": 2041,
+        "note": "Building-wide 1BR price only; NOT a unit-level offer."
+      },
+      "note": "Building-wide starting rent; NOT an exact unit offer"
+    },
+    {
+      "name": "The 202",
+      "sourceUrl": "https://hotpads.com/the-202-washington-dc-20002-24bkmpg/pad",
+      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "result": "summary-only",
+      "summary": {
+        "oneBrCount": 7,
+        "oneBrStartingTotal": 2008,
+        "note": "Building-wide 1BR price only; NOT a unit-level offer."
+      },
+      "note": "Building-wide starting rent; NOT an exact unit offer"
+    },
+    {
+      "name": "Flats 130",
+      "sourceUrl": "https://hotpads.com/flats-130-at-constitution-square-washington-dc-20002-skdx4u/pad",
+      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "result": "reachable",
+      "note": "Page reachable; no verified unit price parsed"
+    },
+    {
+      "name": "The Hale",
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "result": "parsed",
+      "unitCount": 11,
+      "note": "Parsed floor-plan offers; exact Feb 7 move-in not verified"
+    },
+    {
+      "name": "Slate at NoMa",
+      "sourceUrl": "https://www.apartments.com/slate-at-noma-washington-dc/ft0h56v/",
+      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "result": "unavailable",
+      "note": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "OZMA",
+      "sourceUrl": "https://bozzuto.com/apartments-for-rent/dc/washington/ozma",
+      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "result": "reachable",
+      "note": "Page reachable; no verified unit price parsed"
+    },
+    {
+      "name": "The Burton",
+      "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
+      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "result": "summary-only",
+      "summary": {
+        "oneBrCount": 13,
+        "oneBrStartingTotal": 2134,
+        "note": "Building-wide 1BR price only; NOT a unit-level offer."
+      },
+      "note": "Building-wide starting rent; NOT an exact unit offer"
+    },
+    {
+      "name": "Elevation at Washington Gateway",
+      "sourceUrl": "https://www.bozzuto.com/apartments-for-rent/dc/washington/elevation-at-washington-gateway/floor-plans",
+      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "result": "reachable",
+      "note": "Page reachable; no verified unit price parsed"
+    },
+    {
+      "name": "Cielo",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    },
+    {
+      "name": "Loree Grand at Union Place",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    },
+    {
+      "name": "The Axis",
+      "sourceUrl": "https://hotpads.com/the-axis-washington-dc-20002-sm1e8h/pad",
+      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "result": "summary-only",
+      "summary": {
+        "oneBrCount": 3,
+        "oneBrStartingTotal": 1958,
+        "note": "Building-wide 1BR price only; NOT a unit-level offer."
+      },
+      "note": "Building-wide starting rent; NOT an exact unit offer"
+    },
+    {
+      "name": "Press House",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    },
+    {
+      "name": "Mira First & M",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    },
+    {
+      "name": "Camden NoMa",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    },
+    {
+      "name": "Tribeca NoMa",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    },
+    {
+      "name": "The Iris",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    },
+    {
+      "name": "Affinity at 2M",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    },
+    {
+      "name": "425 Mass",
+      "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
+      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "result": "summary-only",
+      "summary": {
+        "oneBrCount": 38,
+        "oneBrStartingTotal": 2092,
+        "note": "Building-wide 1BR price only; NOT a unit-level offer."
+      },
+      "note": "Building-wide starting rent; NOT an exact unit offer"
+    },
+    {
+      "name": "Alta 801",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    },
+    {
+      "name": "Reverb",
+      "sourceUrl": "https://hotpads.com/reverb-washington-dc-20001-249hczp/pad",
+      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "result": "summary-only",
+      "summary": {
+        "oneBrCount": 16,
+        "oneBrStartingTotal": 1875,
+        "note": "Building-wide 1BR price only; NOT a unit-level offer."
+      },
+      "note": "Building-wide starting rent; NOT an exact unit offer"
+    },
+    {
+      "name": "The Shay",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    },
+    {
+      "name": "7th Flats",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    },
+    {
+      "name": "The Colonel",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    },
+    {
+      "name": "Banner Lane",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    },
+    {
+      "name": "The Florian",
+      "result": "no-source",
+      "note": "No configured direct price/official source"
+    }
+  ],
+  "explanation": "No Feb 7 lease start is confirmed without an exact date and leasing evidence. Page connectivity is not price validation."
+}

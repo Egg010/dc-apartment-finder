@@ -1,0 +1,138 @@
+{
+  "updatedAt": "2026-11-01T15:45:17+00:00",
+  "observations": [
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "S1",
+      "bedrooms": 0,
+      "price": 1895,
+      "priceBasis": "base",
+      "availableDate": null,
+      "observedAt": "2026-11-01T15:45:17+00:00",
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A5",
+      "bedrooms": 1,
+      "price": 2218,
+      "priceBasis": "base",
+      "availableDate": null,
+      "observedAt": "2026-11-01T15:45:17+00:00",
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A2",
+      "bedrooms": 1,
+      "price": 2358,
+      "priceBasis": "base",
+      "availableDate": null,
+      "observedAt": "2026-11-01T15:45:17+00:00",
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A12",
+      "bedrooms": 1,
+      "price": 2458,
+      "priceBasis": "base",
+      "availableDate": null,
+      "observedAt": "2026-11-01T15:45:17+00:00",
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A8",
+      "bedrooms": 1,
+      "price": 3137,
+      "priceBasis": "base",
+      "availableDate": null,
+      "observedAt": "2026-11-01T15:45:17+00:00",
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "S3",
+      "bedrooms": 0,
+      "price": 1990,
+      "priceBasis": "base",
+      "availableDate": null,
+      "observedAt": "2026-11-01T15:45:17+00:00",
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A1",
+      "bedrooms": 1,
+      "price": 2098,
+      "priceBasis": "base",
+      "availableDate": null,
+      "observedAt": "2026-11-01T15:45:17+00:00",
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "S2",
+      "bedrooms": 0,
+      "price": 2125,
+      "priceBasis": "base",
+      "availableDate": null,
+      "observedAt": "2026-11-01T15:45:17+00:00",
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A10",
+      "bedrooms": 1,
+      "price": 2298,
+      "priceBasis": "base",
+      "availableDate": null,
+      "observedAt": "2026-11-01T15:45:17+00:00",
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A4",
+      "bedrooms": 1,
+      "price": 2428,
+      "priceBasis": "base",
+      "availableDate": null,
+      "observedAt": "2026-11-01T15:45:17+00:00",
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceConfidence": "plan-price-only"
+    },
+    {
+      "building": "The Hale",
+      "unit": null,
+      "plan": "A9",
+      "bedrooms": 1,
+      "price": 2433,
+      "priceBasis": "base",
+      "availableDate": null,
+      "observedAt": "2026-11-01T15:45:17+00:00",
+      "sourceUrl": "https://www.thehaledc.com/availability",
+      "sourceConfidence": "plan-price-only"
+    }
+  ],
+  "note": "Plan-level offers are NOT identical-unit repeat sales. Compare cautious like-for-like published prices only."
+}
