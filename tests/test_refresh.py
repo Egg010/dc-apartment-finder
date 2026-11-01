@@ -37,6 +37,23 @@ class ApartmentResearchTests(unittest.TestCase):
     def test_hale_does_not_parse_nonoffers(self):
         self.assertEqual([], mod.hale_units("From $2,000 cheap units today", "The Hale", "https://example.org"))
 
+    def test_hotpads_exact_unit_rows_keep_rent_basis(self):
+        sample = (
+            "This listing now includes required monthly fees in the total price. "
+            "Studio • 1 bath • 588 sqft Unit Total price / mo Available Unit details "
+            "0116 $1,903 Now 0716 $2,005 Now "
+            "1 Bed • 1 bath • 601 sqft Unit Total price / mo Available Unit details "
+            "0448 $2,191 Now 0848 $2,392$2,358 12/7/2026 "
+            "2 Beds • 2 bath • 900 sqft 0220 $3,000 Now"
+        )
+        rows = mod.hotpads_units(sample, "Slate at NoMa", "https://example.org")
+        self.assertEqual(4, len(rows))
+        self.assertEqual([0, 0, 1, 1], [r["bedrooms"] for r in rows])
+        self.assertEqual(2358, rows[3]["totalRent"])
+        self.assertEqual("2026-12-07", rows[3]["availableDate"])
+        self.assertEqual("total", rows[3]["priceBasis"])
+        self.assertFalse(any(r["feb7Confirmed"] for r in rows))
+
     def test_hotpads_summary_is_not_an_exact_unit(self):
         txt = "There are 6 one-bedroom apartments available starting at $2,358"
         self.assertEqual(2358, mod.hotpads_summary(txt)["oneBrStartingTotal"])
