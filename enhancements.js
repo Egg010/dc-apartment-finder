@@ -6,7 +6,7 @@ var root=document.getElementById("dashboardEnhancements");
 if(!api||!root)return;
 var KEY="dcmap.v2";
 var tabs=["Overview","Units & dates","Budget","Tours","Price history","Data quality"];
-var current=0, search="", selected="", unitFilter="oneBr";
+var current=0, search="", selected="", unitFilter="oneBr", dateFilter="all";
 var store=read(), history=null, feed=null, alerts=null, feedError=null;
 function read(){try{var a=JSON.parse(localStorage.getItem(KEY)||"{}");return a&&typeof a==="object"?a:{}}catch(_){return {}}}
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){console.warn("Could not save dashboard data",e)}}
@@ -52,15 +52,30 @@ el("p",parent,"Priority ranking considers approximate all-in cost, Red Line walk
 table(parent,["Rank","Building","Score / 100*","Monthly estimate","Move-in","Metro","Source age","Actions"],ranked.slice(0,12).map(function(l,i){var c=calc(l);return [i+1,l.name,score(l),c.recurring==null?"Unknown":money(c.recurring)+(c.estimated?" est.":""),status(l),l.redWalkMin+" min",quality(l),function(td){button(td,"Compare costs",function(){selected=l.name;tab(2)});button(td,"Tour",function(){selected=l.name;tab(3)})}]}));
 note(parent,"*Scores are directional and can exceed 100 when a Feb 7 confirmation exists; they aren't a statistical prediction. Cost estimates include an editable $125 utility allowance and estimated parking where not published.");
 }
-function unitStatus(u){if(u.feb7Confirmed&&u.availableDate==="2027-02-07"&&u.confirmationSource)return "Verified Feb 7";if(u.availableDate&&u.availableDate>"2027-02-07")return "Advertised too late";if(u.availableDate)return "Earlier date — ask leasing";return "Exact date unknown"}
+function unitStatus(u){if(u.feb7Confirmed&&u.availableDate==="2027-02-07"&&u.confirmationSource)return "Verified Feb 7";if(u.availableDate==="2027-02-07")return "Listed Feb 7 — verify";if(u.availableDate&&u.availableDate>"2027-02-07")return "Advertised too late";if(u.availableDate)return "Earlier date — ask leasing";return "Exact date unknown"}
 function unitView(parent){
 heading(parent,"Unit inventory & target move-in","Automated findings are separated from manually verified lease-start confirmations. An earlier availability date does not mean the building will hold a unit.");
 var units=feed&&Array.isArray(feed.units)?feed.units:[];
 var tools=el("div",parent,undefined,"dc-actions");
 selectField(tools,"Unit type",[["oneBr","1 bedroom"],["studio","Studio"],["all","Both"]],unitFilter,function(v){unitFilter=v;render()});
-var visible=units.filter(function(u){return unitFilter==="all"||u.bedrooms===(unitFilter==="studio"?0:1)});
+selectField(tools,"Availability",[["all","Show all"],["possible","Not later than Feb 7"],["exact","Listed for Feb 7"]],dateFilter,function(v){dateFilter=v;render()});
+var visible=units.filter(function(u){
+ var typeOK=unitFilter==="all"||u.bedrooms===(unitFilter==="studio"?0:1);
+ var dateOK=dateFilter==="all"||(dateFilter==="exact"?u.availableDate==="2027-02-07":!u.availableDate||u.availableDate<="2027-02-07");
+ return typeOK&&dateOK;
+}).sort(function(a,b){
+ var pa=a.totalRent!=null?a.totalRent:a.baseRent,pb=b.totalRent!=null?b.totalRent:b.baseRent;
+ return (pa||999999)-(pb||999999);
+});
 if(!visible.length)el("p",parent,"No machine-readable unit offers yet. Source checks do not equal inventory. Use the leasing confirmation form below.","dc-empty");
 else table(parent,["Building","Unit / plan","Rent","Size","Available date","February eligibility","Source"],visible.slice(0,100).map(function(u){return [u.building||"The Hale",(u.unit||"Unspecified")+" / "+(u.plan||"Unknown"),money(u.totalRent!=null?u.totalRent:u.baseRent)+(u.totalRent!=null?" total":" base"),u.sqft?u.sqft+" sq ft":"—",u.availableDate?displayDate(u.availableDate):(u.availability||"Unknown"),unitStatus(u),function(td){if(u.sourceUrl)link(td,u.sourceUrl,"View")}]}));
+var buildingPrices=(feed&&feed.checks||[]).filter(function(c){return c.summary&&c.summary.oneBrStartingTotal!=null});
+if(buildingPrices.length){
+ el("div",parent,undefined,"dc-subtle");
+ el("h3",parent,"Additional building-wide 1BR starting rents");
+ note(parent,"These figures were parsed from building-level listing FAQs. They are NOT specific units, February availability, or all-in quotes.");
+ table(parent,["Building","From","1BRs reported","Source"],buildingPrices.sort(function(a,b){return a.summary.oneBrStartingTotal-b.summary.oneBrStartingTotal}).map(function(c){return [c.name,money(c.summary.oneBrStartingTotal)+" (listing total)",c.summary.oneBrCount,function(td){link(td,c.sourceUrl,"Open")}]}));
+}
 el("div",parent,undefined,"dc-subtle");
 var h=heading(parent,"Confirm February 7 with leasing","Manual status is saved in this browser. Mark confirmed only when the leasing office verified an exact Feb 7 lease start for a named unit.");
 var inputs=el("div",parent,undefined,"dc-form");propertyChoices(inputs,"Building",function(){render()});
@@ -114,7 +129,11 @@ button(parent,"Save tour details",function(){store.tours=store.tours||{};store.t
 el("div",parent,undefined,"dc-subtle");el("h3",parent,"Tour pipeline");
 var items=Object.keys(store.tours||{}).map(function(k){return [k,store.tours[k]]});
 if(!items.length)el("p",parent,"No tours saved yet.","dc-empty");
-else table(parent,["Building","Stage","Tour date","Unit","Follow-up","Open"],items.map(function(k){return [k[0],k[1].status,displayDate(k[1].date),k[1].unit||"—",displayDate(k[1].followUp),function(td){button(td,"Edit",function(){selected=k[0];render()})}]}));
+else{
+ var due=items.filter(function(k){return k[1].followUp&&k[1].followUp<=dateStr()&&k[1].status!=="declined"&&k[1].status!=="applied"});
+ if(due.length)el("p",parent,due.length+" follow-up(s) due today or earlier. Review their leasing responses.","dc-note");
+ table(parent,["Building","Stage","Tour date","Unit","Follow-up","Open"],items.map(function(k){return [k[0],k[1].status,displayDate(k[1].date),k[1].unit||"—",displayDate(k[1].followUp),function(td){button(td,"Edit",function(){selected=k[0];render()})}]}));
+}
 }
 function historyView(parent){
 heading(parent,"Price trends & potential alerts","Only successfully extracted, comparable, source-dated prices count. A change in available unit mix is not necessarily a price change for the same unit.");
