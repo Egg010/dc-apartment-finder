@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01T15:45:17+00:00",
+  "generated": "2026-11-01T15:48:18+00:00",
   "targetMoveIn": "2027-02-07",
   "source": "Daily direct-page checks with conservative parsing",
   "feb7ConfirmedCount": 0,
@@ -196,7 +196,7 @@
     {
       "name": "The Belgard",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
-      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
       "result": "summary-only",
       "summary": {
         "oneBrCount": 8,
@@ -208,7 +208,7 @@
     {
       "name": "The 202",
       "sourceUrl": "https://hotpads.com/the-202-washington-dc-20002-24bkmpg/pad",
-      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
       "result": "summary-only",
       "summary": {
         "oneBrCount": 7,
@@ -220,14 +220,14 @@
     {
       "name": "Flats 130",
       "sourceUrl": "https://hotpads.com/flats-130-at-constitution-square-washington-dc-20002-skdx4u/pad",
-      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
       "result": "reachable",
       "note": "Page reachable; no verified unit price parsed"
     },
     {
       "name": "The Hale",
       "sourceUrl": "https://www.thehaledc.com/availability",
-      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
       "result": "parsed",
       "unitCount": 11,
       "note": "Parsed floor-plan offers; exact Feb 7 move-in not verified"
@@ -235,21 +235,21 @@
     {
       "name": "Slate at NoMa",
       "sourceUrl": "https://www.apartments.com/slate-at-noma-washington-dc/ft0h56v/",
-      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
       "result": "unavailable",
       "note": "HTTP Error 403: Forbidden"
     },
     {
       "name": "OZMA",
       "sourceUrl": "https://bozzuto.com/apartments-for-rent/dc/washington/ozma",
-      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
       "result": "reachable",
       "note": "Page reachable; no verified unit price parsed"
     },
     {
       "name": "The Burton",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
-      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
       "result": "summary-only",
       "summary": {
         "oneBrCount": 13,
@@ -261,24 +261,28 @@
     {
       "name": "Elevation at Washington Gateway",
       "sourceUrl": "https://www.bozzuto.com/apartments-for-rent/dc/washington/elevation-at-washington-gateway/floor-plans",
-      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
       "result": "reachable",
       "note": "Page reachable; no verified unit price parsed"
     },
     {
       "name": "Cielo",
-      "result": "no-source",
-      "note": "No configured direct price/official source"
+      "sourceUrl": "https://www.apartments.com/cielo-washington-dc/64wmmev/",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
+      "result": "unavailable",
+      "note": "HTTP Error 403: Forbidden"
     },
     {
       "name": "Loree Grand at Union Place",
-      "result": "no-source",
-      "note": "No configured direct price/official source"
+      "sourceUrl": "https://www.loreegranddc.com/floorplans",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
+      "result": "unavailable",
+      "note": "HTTP Error 403: Forbidden"
     },
     {
       "name": "The Axis",
       "sourceUrl": "https://hotpads.com/the-axis-washington-dc-20002-sm1e8h/pad",
-      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
       "result": "summary-only",
       "summary": {
         "oneBrCount": 3,
@@ -320,7 +324,7 @@
     {
       "name": "425 Mass",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
-      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
       "result": "summary-only",
       "summary": {
         "oneBrCount": 38,
@@ -331,13 +335,15 @@
     },
     {
       "name": "Alta 801",
-      "result": "no-source",
-      "note": "No configured direct price/official source"
+      "sourceUrl": "https://alta801.com/floorplans/",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
+      "result": "reachable",
+      "note": "Page reachable; no verified unit price parsed"
     },
     {
       "name": "Reverb",
       "sourceUrl": "https://hotpads.com/reverb-washington-dc-20001-249hczp/pad",
-      "checkedAt": "2026-11-01T15:45:17+00:00",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
       "result": "summary-only",
       "summary": {
         "oneBrCount": 16,
@@ -348,8 +354,10 @@
     },
     {
       "name": "The Shay",
-      "result": "no-source",
-      "note": "No configured direct price/official source"
+      "sourceUrl": "https://www.apartments.com/the-shay-washington-dc/lqsqmxd/",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
+      "result": "unavailable",
+      "note": "HTTP Error 403: Forbidden"
     },
     {
       "name": "7th Flats",
@@ -368,8 +376,10 @@
     },
     {
       "name": "The Florian",
-      "result": "no-source",
-      "note": "No configured direct price/official source"
+      "sourceUrl": "https://www.apartments.com/the-florian-washington-dc/9941zb6/",
+      "checkedAt": "2026-11-01T15:48:18+00:00",
+      "result": "unavailable",
+      "note": "HTTP Error 403: Forbidden"
     }
   ],
   "explanation": "No Feb 7 lease start is confirmed without an exact date and leasing evidence. Page connectivity is not price validation."
