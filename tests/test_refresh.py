@@ -57,6 +57,30 @@ class ApartmentResearchTests(unittest.TestCase):
         self.assertEqual(2, len(c["observations"]))
         self.assertEqual([2100, 2050], [r["price"] for r in c["observations"]])
 
+    def test_apartments_dot_com_unit_dates_and_bedrooms(self):
+        sample = (
+            "S03A - Studio $1,993 Studio 1 Bath 514 Sq Ft "
+            "View S03A - Studio Floor Plan Details 1 Available unit "
+            "Unit Base Price Sq Ft Availability Unit Details "
+            "Unit 1002 price $1,993 square feet 514 availibility Now "
+            "J04 - JR 1 Bedroom Starting at $2,133 1 Bed 1 Bath 502 Sq Ft "
+            "View J04 - JR 1 Bedroom Floor Plan Details 2 Available units "
+            "Unit 1007 price $2,193 square feet 502 availibility Now "
+            "Unit 0907 price $2,133 square feet 502 availibility Nov 7 "
+            "J01A - JR 1 Bedroom $1,926 1 Bed 1 Bath 511 Sq Ft "
+            "View J01A - JR 1 Bedroom Floor Plan Details 1 Available unit "
+            "Unit 0642 price $1,926 square feet 511 availibility Jan 21, 2027 "
+            "J02 - JR 1 Bedroom $2,139 1 Bed 1 Bath 521 Sq Ft "
+            "View J02 - JR 1 Bedroom Floor Plan Details 1 Available unit "
+            "Unit 0340 price $2,139 square feet 521 availibility Feb 16, 2027"
+        )
+        units = mod.apartments_dot_com_units(sample, "Cielo", "https://example.org")
+        self.assertEqual(5, len(units))
+        self.assertEqual([0, 1, 1, 1, 1], [u["bedrooms"] for u in units])
+        self.assertEqual("2027-01-21", units[3]["availableDate"])
+        self.assertEqual("2027-02-16", units[4]["availableDate"])
+        self.assertFalse(any(u["feb7Confirmed"] for u in units))
+
     def test_source_selection_prefers_price_source(self):
         a = {"links": [
             {"url": "https://example.org", "official": True},
