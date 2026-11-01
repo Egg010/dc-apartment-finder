@@ -1,28 +1,56 @@
-# DC Apartment Finder
+# DC Apartment Finder — NoMa / Shaw / Union Market
 
-Public static GitHub Pages map for evaluating NoMa, Union Market, Shaw, and Mount Vernon Triangle apartment complexes for a **February 7, 2027** move-in.
+Public, mobile-friendly GitHub Pages apartment-research site for a planned **February 7, 2027 move-in**. Source data is dated, and none of the site's automated results should be interpreted as a guaranteed leasing quote.
 
-## Daily monitoring
+**Website:** https://egg010.github.io/dc-apartment-finder/
 
-The workflow [Refresh apartment research and deploy website](.github/workflows/refresh-and-deploy.yml) runs daily at **11:15 UTC** and on pushes to `main`. It can also be started manually from the GitHub Actions tab. It generates `data/live.json` for the site's availability-watch panel and deploys the HTML plus JSON via GitHub Pages.
+## Features
 
-**Required once:** Repository Settings → Pages → Build and deployment → Source → **GitHub Actions**. The previous branch-based Pages configuration does not deploy the generated JSON. Run the workflow after switching.
+- Custom interactive map with **25 apartment complexes**, public transport, groceries, cafés, neighborhood filters and verified-laundry/parking filter
+- **Apartment Decision Center** with transparent shortlist scoring, February lease-start status, sortable observed units, budget model, tours, source audit and price-history view
+- **All-in cost model**: rent, known mandatory fees, parking, adjustable utilities, one-time application/deposit costs, and optionally amortized leasing promotions. The $2,200 reference is a **rent-only limit**; parking and utilities are shown separately, not presumed to be part of that cap.
+- **Leasing confirmations** require a named unit, exact February 7 lease-start date, a confirmation date and a source. Earlier listed move-in dates are labeled *potential, ask leasing*.
+- **Tour pipeline** tracks properties contacted, tour dates, unit numbers, garage quotes, leasing contacts, promotions and follow-up dates.
+- **Favorites and notes backup**: export/import JSON for cross-device portability. Personal notes remain in browser localStorage unless explicitly exported.
+- **Daily source checks**, dated snapshots, source failure visibility, unit price histories, and GitHub Issue alerts for new inexpensive one-bedrooms / same-unit price drops after a historical baseline.
 
-## Data accuracy
+## Deployment
 
-- The HTML embeds 25 researched complexes with individually dated snapshots.
-- The daily task attempts one direct request per configured building source; buildings with no direct URL report `no-source`.
-- Only The Hale's server-rendered floor-plan descriptions currently have an automated **unit-level** extractor. For other sites, `reachable` means the page responded, **not** that apartment prices or availability have been verified. If the source markup changes, the parser reports `parse-failed`.
-- A unit advertised as available now, in November, December, or January is **not** a confirmed February 7 lease start. The checker reports **zero confirmed** unless exact target-date eligibility is independently verified; it intentionally does not guess.
-- Base rents may omit mandatory monthly fees, parking, and utilities. Source restrictions, changing offers, and errors can interrupt automated checks.
-- All automated records identify when they were checked and link to their source. This is a research aid, not a guaranteed real-time leasing feed.
+[GitHub Actions workflow](.github/workflows/refresh-and-deploy.yml) runs on pushes, can be manually dispatched, and is scheduled daily at **11:15 UTC** (6:15 AM ET in winter, 7:15 AM ET in daylight saving time). It:
 
-## Structure
+1. Runs Python unit tests and `node --check`.
+2. Requests configured listing pages once per property, using explicit extraction rules.
+3. Writes `data/live.json`, `data/history.json`, and `data/alerts.json`.
+4. Tries to commit those dated, **public listing observations** to `main` with retry protection.
+5. Optionally creates a GitHub Issue for new observed pricing leads. These are preliminary and need verification.
+6. Publishes the site HTML, CSS, JS, and JSON through GitHub Pages.
 
-- `index.html`: interactive map, 25 buildings, saved comparisons, source notes, market research table, and availability watch.
-- `scripts/refresh_listings.py`: conservative web checker; outputs `data/live.json`.
-- `.github/workflows/refresh-and-deploy.yml`: automatic refresh and GitHub Pages deployment.
+**Settings → Pages → Source must be GitHub Actions.** If no public site appears, inspect Actions for the latest run.
 
-## February leasing confirmation checklist
+## Data quality — please read
 
-For any attractive unit, ask the leasing team for (1) the exact February 7, 2027 lease-start option; (2) the quote for a 12–15-month lease; (3) all mandatory monthly fees and utilities; (4) garage availability and monthly rate; (5) floor plan, unit number, and in-unit washer/dryer; (6) promotion eligibility for a February start; and (7) how long the quote may be held.
+- A successful `reachable` check **does not** mean a price was extracted.
+- `summary-only` means building-wide starting rent and an advertised unit count were recognized; it does **not** describe a specific unit.
+- `parsed` refers to recognized floor-plan or unit rows, with the original source linked. `no-source`, `unavailable` and `parse-failed` are visible and do not silently become current prices.
+- The Hale parser records **floor-plan pricing**, not actual unit numbers. HotPads and Apartments.com unit parsers only record explicitly paired apartment numbers, prices and dates when the markup is readable. Some rental sites return HTTP 403; a permitted HotPads listing may be used as a fallback without pretending its prices are fee-comparable.
+- **Income-restricted listings** (such as Loree Grand's WDU units) are not interchangeable with market-rate inventory. The map uses the sourced market-rate studio baseline there.
+- A unit advertised as available before February 7 may not be held until that date. Only an actual leasing confirmation counts.
+- **Price-history comparisons require matching unit (or floor plan) and price basis.** Floor-plan price movements can reflect a changing unit mix; review individual listings before drawing conclusions.
+- GitHub issues are public. Emails/mobile notifications depend on your [repository watch settings](https://github.com/Egg010/dc-apartment-finder); an issue is not an email delivery guarantee.
+- Prices, fees, reviews, promotions and availability change frequently. Walk estimates and schematic streets are approximations. The building's official leasing office is authoritative.
+
+## Project files
+
+| File | Purpose |
+|---|---|
+| `index.html` | Interactive neighborhood map, embedded property research and refresh adapter |
+| `enhancements.css` | Responsive Decision Center styles |
+| `enhancements.js` | Unit/date filters, budget calculator, rankings, tours, backup, historical alerts |
+| `scripts/refresh_listings.py` | Daily source checking, conservative parsing and history |
+| `scripts/publish_alerts.py` | Optional GitHub Issue digest for newly detected price signals |
+| `tests/test_refresh.py` | Parser, date, history and inventory sanity tests |
+| `.github/workflows/refresh-and-deploy.yml` | Tests, daily refresh, history archive, alerts and Pages deployment |
+
+## Before signing a lease
+
+Ask for the specific unit number and floor plan, **February 7 lease commencement**, lease term, all mandatory monthly fees, actual parking availability and cost, estimated usage-based utilities, in-unit washer/dryer, concession eligibility for your dates, full move-in costs, and a written quote expiration.
