@@ -192,6 +192,67 @@ def apartments_dot_com_units(text: str, building: str, url: str) -> list[dict[st
     return results
 
 
+
+def hotpads_units(text: str, building: str, url: str) -> list[dict[str, Any]]:
+    """Parse exact unit rows in recognizable HotPads floor-plan tables.
+
+    Some buildings only expose a building-wide starting rent; those are
+    handled separately and NEVER represented as units. If markup changes,
+    return no units rather than guessing.
+    """
+    flat = re.sub(r"\s+", " ", text.replace("\u00a0", " "))
+    floorplans = list(re.finditer(
+        r"(?P<kind>Studio|1\s+Bed|2\s+Beds)\s*[•·]?\s*\d+\s+baths?"
+        r"\s*[•·]?\s*(?P<sqft>[\d,]+)\s*sqft",
+        flat, re.I,
+    ))
+    pattern = re.compile(
+        r"\b(?P<unit>(?:[A-Z]{1,3}-)?[A-Z0-9]{3,6})"
+        r"\s+(?P<prices>(?:\$[\d,]+\s*){1,2})"
+        r"\s*(?P<available>Now|\d{1,2}/\d{1,2}/20\d{2})\b",
+        re.I,
+    )
+    is_total = bool(re.search(
+        r"(?:includes required monthly fees in the total price|Total price\s*/\s*mo)",
+        flat, re.I,
+    ))
+    seen: set[str] = set()
+    result: list[dict[str, Any]] = []
+    for i, heading in enumerate(floorplans):
+        section = flat[heading.end():floorplans[i + 1].start() if i + 1 < len(floorplans) else len(flat)]
+        kind = heading.group("kind").lower()
+        bedrooms = 0 if kind == "studio" else 1 if kind == "1 bed" else 2
+        if bedrooms > 1:
+            continue
+        sqft = int(heading.group("sqft").replace(",", ""))
+        if not (250 <= sqft <= 1600):
+            continue
+        for match in pattern.finditer(section):
+            code = match.group("unit")
+            prices = re.findall(r"\$([\d,]+)", match.group("prices"))
+            if not prices or code in seen:
+                continue
+            price = int(prices[-1].replace(",", ""))
+            if not 1000 <= price <= 9000:
+                continue
+            avail = match.group("available")
+            date = None if avail.lower() == "now" else datetime.strptime(avail, "%m/%d/%Y").date().isoformat()
+            result.append({
+                "building": building, "unit": code, "plan": None,
+                "bedrooms": bedrooms, "sqft": sqft,
+                "baseRent": None if is_total else price,
+                "totalRent": price if is_total else None,
+                "priceBasis": "total" if is_total else "advertised",
+                "availableDate": date, "availability": avail,
+                "availabilityPrecision": "exact" if date else "now",
+                "feb7Confirmed": False, "sourceUrl": url,
+                "sourceType": "hotpads-unit-table",
+                "sourceConfidence": "unit-level-advertisement",
+            })
+            seen.add(code)
+    return result
+
+
 def hotpads_summary(text: str) -> dict[str, Any] | None:
     """Read only explicit building-level 1BR starting-price statements."""
     clean = re.sub(r"\s+", " ", text)
@@ -215,7 +276,7 @@ def extract_offers(property_data: dict[str, Any], text: str, url: str):
     if "apartments.com" in url.lower():
         return apartments_dot_com_units(text, property_data["name"], url), None
     if "hotpads.com" in url.lower():
-        return [], hotpads_summary(text)
+        return hotpads_units(text, property_data["name"], url), hotpads_summary(text)
     return [], None
 
 
