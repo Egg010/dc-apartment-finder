@@ -7,7 +7,7 @@ if(!api||!root)return;
 var KEY="dcmap.v2";
 var tabs=["Overview","Units & dates","Budget","Tours","Price history","Data quality"];
 var current=0, search="", selected="", unitFilter="oneBr";
-var store=read(), history=null, feed=null, feedError=null;
+var store=read(), history=null, feed=null, alerts=null, feedError=null;
 function read(){try{var a=JSON.parse(localStorage.getItem(KEY)||"{}");return a&&typeof a==="object"?a:{}}catch(_){return {}}}
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){console.warn("Could not save dashboard data",e)}}
 function clone(o){return JSON.parse(JSON.stringify(o))}
@@ -52,7 +52,7 @@ el("p",parent,"Priority ranking considers approximate all-in cost, Red Line walk
 table(parent,["Rank","Building","Score / 100*","Monthly estimate","Move-in","Metro","Source age","Actions"],ranked.slice(0,12).map(function(l,i){var c=calc(l);return [i+1,l.name,score(l),c.recurring==null?"Unknown":money(c.recurring)+(c.estimated?" est.":""),status(l),l.redWalkMin+" min",quality(l),function(td){button(td,"Compare costs",function(){selected=l.name;tab(2)});button(td,"Tour",function(){selected=l.name;tab(3)})}]}));
 note(parent,"*Scores are directional and can exceed 100 when a Feb 7 confirmation exists; they aren't a statistical prediction. Cost estimates include an editable $125 utility allowance and estimated parking where not published.");
 }
-function unitStatus(u){if(u.feb7Confirmed&&u.availableDate==="2027-02-07"&&u.confirmationSource)return "Verified Feb 7";if(u.availableDate&&u.availableDate>"2027-02-07")return "Too late";return "Start date unverified"}
+function unitStatus(u){if(u.feb7Confirmed&&u.availableDate==="2027-02-07"&&u.confirmationSource)return "Verified Feb 7";if(u.availableDate&&u.availableDate>"2027-02-07")return "Advertised too late";if(u.availableDate)return "Earlier date — ask leasing";return "Exact date unknown"}
 function unitView(parent){
 heading(parent,"Unit inventory & target move-in","Automated findings are separated from manually verified lease-start confirmations. An earlier availability date does not mean the building will hold a unit.");
 var units=feed&&Array.isArray(feed.units)?feed.units:[];
@@ -89,7 +89,9 @@ var p=el("p",parent,undefined,"dc-note");p.textContent=ccalc.estimated?"Some cos
 var ac=el("div",parent,undefined,"dc-actions");
 button(ac,"Save custom quote",function(){store.costs=store.costs||{};store.costs[l.name]=vals;persist();render()},"primary");
 button(ac,"Clear custom quote",function(){if(store.costs)delete store.costs[l.name];persist();render()});
-var budget=2200;var all=calc(l);el("p",parent,all.recurring==null?"Pricing missing":((all.recurring>budget?money(all.recurring-budget)+" above":money(budget-all.recurring)+" below")+" the $2,200 all-in target (including estimated parking/utilities)."),"dc-note");
+var budget=2200;var all=calc(l);var raw=all.c.rent;
+el("p",parent,raw==null?"Published unit pricing missing":((raw>budget?money(raw-budget)+" above":money(budget-raw)+" below")+" the $2,200 rent-only reference (parking and utilities excluded)."),"dc-note");
+el("p",parent,"Estimated recurring monthly outlay with parking, utilities and extra fees: "+money(all.recurring)+". This is not a second hard budget unless you choose to set one.","dc-small");
 el("div",parent,undefined,"dc-subtle");
 el("h3",parent,"All-in price comparison");
 table(parent,["Building","Type","Recurring monthly","Net effective","Confidence"],listings().filter(function(x){return x.status!=="skip"}).map(function(x){var a=calc(x);return [x.name,unitFilter==="studio"?"Studio":"1BR",money(a.recurring),money(a.effective),a.estimated?"Partly estimated":"Published total + estimates"]}).sort(function(a,b){var x=Number(a[2].replace(/[^0-9]/g,""))||999999,y=Number(b[2].replace(/[^0-9]/g,""))||999999;return x-y}).slice(0,18));
@@ -116,6 +118,11 @@ else table(parent,["Building","Stage","Tour date","Unit","Follow-up","Open"],ite
 }
 function historyView(parent){
 heading(parent,"Price trends & potential alerts","Only successfully extracted, comparable, source-dated prices count. A change in available unit mix is not necessarily a price change for the same unit.");
+if(alerts&&Array.isArray(alerts.events)&&alerts.events.length){
+  el("h3",parent,"New pricing watch alerts");
+  table(parent,["Property","Unit","Signal","Advertised rent","Source"],alerts.events.map(function(a){return [a.building,a.unit,a.kind==="unit-price-drop"?"Unit price decrease "+money(a.change):"Newly observed listing",money(a.price)+" "+(a.priceBasis||""),function(td){if(a.sourceUrl)link(td,a.sourceUrl,"Review")}]}));
+  note(parent,"These alerts are preliminary leasing leads, not guaranteed all-in budget matches or February lease starts.");
+}
 if(!history||!Array.isArray(history.observations)||!history.observations.length){el("p",parent,"No historical price records have been published yet. Daily refreshes will append observations after successful extraction. Alerts will appear here when comparable listings change.","dc-empty");return;}
 var records=history.observations;
 var key=function(o){return [o.building,o.unit||o.plan||"",o.bedrooms,o.priceBasis||""].join("|")};
@@ -125,7 +132,8 @@ Object.keys(groups).forEach(function(k){var rows=groups[k].sort(function(a,b){re
 var drops=changes.filter(function(c){return c.diff<0});var first=el("div",parent,undefined,"dc-layout");[[records.length,"Dated observations"],[changes.length,"Observed changes"],[drops.length,"Price decreases"]].forEach(function(z){var d=el("div",first,undefined,"dc-kpi");el("strong",d,z[0]);note(d,z[1])});
 if(!changes.length)el("p",parent,"Not enough comparable days yet to calculate price changes.","dc-note");
 else table(parent,["Building","Unit / plan","Previous","New","Change","Observed"],changes.sort(function(a,b){return a.diff-b.diff}).slice(0,30).map(function(c){return [c.name,c.unit,money(c.before),money(c.after),(c.diff>0?"+":"")+money(c.diff),c.when.slice(0,10)]}));
-note(parent,"In-app watch only: the repository currently has no private email destination or push-notification service configured. This view is not an email alert system.");
+note(parent,"The daily workflow can also create GitHub Issues for new exact-unit price leads. GitHub only sends email/mobile notifications if your account is watching the repository with appropriate notification settings.");
+var act=el("div",parent,undefined,"dc-actions");link(act,"https://github.com/Egg010/dc-apartment-finder/issues","GitHub price-watch Issues");
 }
 function backup(parent){
 var acts=el("div",parent,undefined,"dc-actions");
@@ -163,6 +171,7 @@ var body=el("section",root,undefined,"dc-panel");
 }
 window.DCApartmentEnhancements={render:render};
 window.addEventListener("dc-feed-loaded",function(ev){feed=ev.detail;render()});
+fetch("data/alerts.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw Error("No alerts feed yet");return r.json()}).then(function(a){alerts=a;render()}).catch(function(){alerts=null;render()});
 fetch("data/history.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw Error("No history yet");return r.json()}).then(function(h){history=h;render()}).catch(function(){history=null;render()});
 render();
 })();
