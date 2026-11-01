@@ -129,6 +129,70 @@ def hale_units(text: str, building: str, url: str) -> list[dict[str, Any]]:
     return result
 
 
+
+def apartments_dot_com_units(text: str, building: str, url: str) -> list[dict[str, Any]]:
+    """Parse explicitly paired unit-number, base rent, sqft and availability rows.
+
+    Supports the server-rendered inventory structure used on Apartments.com.
+    A unit's advertised available date is NOT a commitment to a Feb 7 start.
+    """
+    flat = re.sub(r"\s+", " ", text.replace("\u00a0", " "))
+    headers = list(re.finditer(
+        r"(?P<name>[A-Za-z0-9 \-+,]{2,75}?)\s+"
+        r"(?:Starting at\s+)?\$[\d,]+\s+"
+        r"(?P<kind>Studio|1 Bed|2 Beds)\s+\d+\s+Baths?\s+"
+        r"[\d,]+(?:\s*[-–]\s*[\d,]+)?\s+Sq Ft\s+View",
+        flat, re.I,
+    ))
+    rows = re.compile(
+        r"\bUnit\s+(?P<unit>[A-Z0-9-]{2,9})\s+price\s+\$(?P<price>[\d,]+)"
+        r"\s+square feet\s+(?P<sqft>[\d,]+)"
+        r"\s+availib?i?l?ity\s+(?P<available>Now|"
+        r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)"
+        r"\s+\d{1,2}(?:,\s*20\d{2})?)",
+        re.I,
+    )
+    results: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for index, head in enumerate(headers):
+        section = flat[head.end():headers[index + 1].start() if index + 1 < len(headers) else len(flat)]
+        kind = head.group("kind").lower()
+        bedrooms = 0 if kind == "studio" else 1 if kind == "1 bed" else 2
+        if bedrooms > 1:
+            continue
+        plan = head.group("name").strip()
+        for match in rows.finditer(section):
+            code = match.group("unit")
+            price = int(match.group("price").replace(",", ""))
+            sqft = int(match.group("sqft").replace(",", ""))
+            if not (1000 <= price <= 8000 and 250 <= sqft <= 1800) or code in seen:
+                continue
+            seen.add(code)
+            availability = match.group("available").strip()
+            available_date = None
+            if availability.lower() != "now":
+                try:
+                    parts = availability.replace(",", "").split()
+                    month = datetime.strptime(parts[0][:3], "%b").month
+                    year = int(parts[2]) if len(parts) > 2 else 2027 if month <= 4 else 2026
+                    available_date = f"{year}-{month:02d}-{int(parts[1]):02d}"
+                    datetime.strptime(available_date, "%Y-%m-%d")
+                except (ValueError, IndexError):
+                    continue
+            results.append({
+                "building": building, "unit": code, "plan": plan[:90],
+                "bedrooms": bedrooms, "sqft": sqft, "baseRent": price,
+                "totalRent": None, "priceBasis": "base",
+                "availableDate": available_date,
+                "availability": availability,
+                "availabilityPrecision": "exact" if available_date else "now",
+                "feb7Confirmed": False,
+                "sourceUrl": url, "sourceType": "apartments-com-unit-table",
+                "sourceConfidence": "unit-level-advertisement",
+            })
+    return results
+
+
 def hotpads_summary(text: str) -> dict[str, Any] | None:
     """Read only explicit building-level 1BR starting-price statements."""
     clean = re.sub(r"\s+", " ", text)
@@ -149,6 +213,8 @@ def extract_offers(property_data: dict[str, Any], text: str, url: str):
     """Return unit observations and optional weaker building-level evidence."""
     if property_data["name"] == "The Hale":
         return hale_units(text, property_data["name"], url), None
+    if "apartments.com" in url.lower():
+        return apartments_dot_com_units(text, property_data["name"], url), None
     if "hotpads.com" in url.lower():
         return [], hotpads_summary(text)
     return [], None
