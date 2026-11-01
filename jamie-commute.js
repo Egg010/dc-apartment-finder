@@ -61,7 +61,8 @@ function render(){
  element("h2",bar,"Jamie's commute to your apartment");
  element("span",bar,"Jamie → apartment","dc-status");
  element("p",root,"Approximate total time by Metro from Jamie's area to each apartment, including walking, train waiting and transfers. These are planning estimates, not live schedules. Open Google Maps for an exact trip.","dc-note");
- var fields=element("div",root,null,"dc-form");
+ var details=element("details",root);var summary=element("summary",details,"Optional: exact Google Maps directions / travel mode");summary.style.cursor="pointer";
+ var fields=element("div",details,null,"dc-form");
  var label=element("label",fields,null,"dc-field");
  element("span",label,"Jamie's starting address (saved only in this browser)");
  var input=element("input",label);
@@ -74,10 +75,10 @@ function render(){
  select.value=mode;
  var apply=element("button",fields,"Save starting address","dc-btn primary");
  apply.type="button";
- var state=element("p",root,"","dc-small");
+ var state=element("p",details,"","dc-small");
  var isExact=Boolean(origin.trim());
  if(!isExact){
-  state.textContent="Full address not saved yet. Routes currently use the Otis Pl NW neighborhood as an approximate starting point. Enter the exact starting address once for door-to-door directions.";
+  state.textContent="Times below are automatically estimated from the Otis Place area. You do not need to enter an address to see them; enter one only for exact Google Maps directions.";
  }else{
   state.textContent="Exact starting address saved in this browser only. It is passed to Google Maps when you open a route; it is not stored in GitHub.";
  }
