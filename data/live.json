@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01T17:01:58+00:00",
+  "generated": "2026-11-01T17:03:36+00:00",
   "targetMoveIn": "2027-02-07",
   "source": "Daily direct-page checks with conservative parsing",
   "feb7ConfirmedCount": 0,
@@ -2304,7 +2304,7 @@
     {
       "name": "The Belgard",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "parsed",
       "unitCount": 14,
       "note": "Parsed floor-plan offers; exact Feb 7 move-in not verified"
@@ -2312,7 +2312,7 @@
     {
       "name": "The 202",
       "sourceUrl": "https://hotpads.com/the-202-washington-dc-20002-24bkmpg/pad",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "parsed",
       "unitCount": 7,
       "note": "Parsed floor-plan offers; exact Feb 7 move-in not verified"
@@ -2320,14 +2320,14 @@
     {
       "name": "Flats 130",
       "sourceUrl": "https://www.flats130.com/availableunits",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "unavailable",
       "note": "HTTP Error 403: Forbidden"
     },
     {
       "name": "The Hale",
       "sourceUrl": "https://www.thehaledc.com/availability",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "parsed",
       "unitCount": 11,
       "note": "Parsed floor-plan offers; exact Feb 7 move-in not verified"
@@ -2335,7 +2335,7 @@
     {
       "name": "Slate at NoMa",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "parsed",
       "unitCount": 14,
       "note": "Parsed floor-plan offers; exact Feb 7 move-in not verified"
@@ -2343,14 +2343,14 @@
     {
       "name": "OZMA",
       "sourceUrl": "https://bozzuto.com/apartments-for-rent/dc/washington/ozma",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "reachable",
       "note": "Page reachable; no verified unit price parsed"
     },
     {
       "name": "The Burton",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "parsed",
       "unitCount": 13,
       "note": "Parsed floor-plan offers; exact Feb 7 move-in not verified"
@@ -2358,14 +2358,14 @@
     {
       "name": "Elevation at Washington Gateway",
       "sourceUrl": "https://www.bozzuto.com/apartments-for-rent/dc/washington/elevation-at-washington-gateway/floor-plans",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "reachable",
       "note": "Page reachable; no verified unit price parsed"
     },
     {
       "name": "Cielo",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "parsed",
       "unitCount": 19,
       "note": "Parsed floor-plan offers; exact Feb 7 move-in not verified"
@@ -2373,14 +2373,14 @@
     {
       "name": "Loree Grand at Union Place",
       "sourceUrl": "https://hotpads.com/loree-grand-at-union-place-washington-dc-20002-skyqtt/pad",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "reachable",
       "note": "Page reachable; no verified unit price parsed"
     },
     {
       "name": "The Axis",
       "sourceUrl": "https://hotpads.com/the-axis-washington-dc-20002-sm1e8h/pad",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "parsed",
       "unitCount": 7,
       "note": "Parsed floor-plan offers; exact Feb 7 move-in not verified"
@@ -2418,7 +2418,7 @@
     {
       "name": "425 Mass",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "parsed",
       "unitCount": 25,
       "note": "Parsed floor-plan offers; exact Feb 7 move-in not verified"
@@ -2426,14 +2426,14 @@
     {
       "name": "Alta 801",
       "sourceUrl": "https://alta801.com/floorplans/",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "reachable",
       "note": "Page reachable; no verified unit price parsed"
     },
     {
       "name": "Reverb",
       "sourceUrl": "https://hotpads.com/reverb-washington-dc-20001-249hczp/pad",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "parsed",
       "unitCount": 6,
       "note": "Parsed floor-plan offers; exact Feb 7 move-in not verified"
@@ -2441,7 +2441,7 @@
     {
       "name": "The Shay",
       "sourceUrl": "https://hotpads.com/the-shay-washington-dc-20001-wd9v5g/pad",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "parsed",
       "unitCount": 8,
       "note": "Parsed floor-plan offers; exact Feb 7 move-in not verified"
@@ -2464,7 +2464,7 @@
     {
       "name": "The Florian",
       "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
-      "checkedAt": "2026-11-01T17:01:58+00:00",
+      "checkedAt": "2026-11-01T17:03:36+00:00",
       "result": "parsed",
       "unitCount": 11,
       "note": "Parsed floor-plan offers; exact Feb 7 move-in not verified"

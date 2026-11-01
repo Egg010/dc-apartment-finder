@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T17:01:58+00:00",
+  "updatedAt": "2026-11-01T17:03:36+00:00",
   "observations": [
     {
       "building": "The Hale",
@@ -9,7 +9,7 @@
       "price": 1895,
       "priceBasis": "base",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://www.thehaledc.com/availability",
       "sourceConfidence": "plan-price-only"
     },
@@ -21,7 +21,7 @@
       "price": 2218,
       "priceBasis": "base",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://www.thehaledc.com/availability",
       "sourceConfidence": "plan-price-only"
     },
@@ -33,7 +33,7 @@
       "price": 2358,
       "priceBasis": "base",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://www.thehaledc.com/availability",
       "sourceConfidence": "plan-price-only"
     },
@@ -45,7 +45,7 @@
       "price": 2458,
       "priceBasis": "base",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://www.thehaledc.com/availability",
       "sourceConfidence": "plan-price-only"
     },
@@ -57,7 +57,7 @@
       "price": 3137,
       "priceBasis": "base",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://www.thehaledc.com/availability",
       "sourceConfidence": "plan-price-only"
     },
@@ -69,7 +69,7 @@
       "price": 1990,
       "priceBasis": "base",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://www.thehaledc.com/availability",
       "sourceConfidence": "plan-price-only"
     },
@@ -81,7 +81,7 @@
       "price": 2098,
       "priceBasis": "base",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://www.thehaledc.com/availability",
       "sourceConfidence": "plan-price-only"
     },
@@ -93,7 +93,7 @@
       "price": 2125,
       "priceBasis": "base",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://www.thehaledc.com/availability",
       "sourceConfidence": "plan-price-only"
     },
@@ -105,7 +105,7 @@
       "price": 2298,
       "priceBasis": "base",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://www.thehaledc.com/availability",
       "sourceConfidence": "plan-price-only"
     },
@@ -117,7 +117,7 @@
       "price": 2428,
       "priceBasis": "base",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://www.thehaledc.com/availability",
       "sourceConfidence": "plan-price-only"
     },
@@ -129,7 +129,7 @@
       "price": 2433,
       "priceBasis": "base",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://www.thehaledc.com/availability",
       "sourceConfidence": "plan-price-only"
     },
@@ -141,7 +141,7 @@
       "price": 1710,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -153,7 +153,7 @@
       "price": 1731,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -165,7 +165,7 @@
       "price": 1785,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -177,7 +177,7 @@
       "price": 1735,
       "priceBasis": "total",
       "availableDate": "2026-12-13",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -189,7 +189,7 @@
       "price": 1740,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -201,7 +201,7 @@
       "price": 1817,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -213,7 +213,7 @@
       "price": 1822,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -225,7 +225,7 @@
       "price": 2201,
       "priceBasis": "total",
       "availableDate": "2026-11-06",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -237,7 +237,7 @@
       "price": 2248,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -249,7 +249,7 @@
       "price": 2274,
       "priceBasis": "total",
       "availableDate": "2026-11-28",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -261,7 +261,7 @@
       "price": 2299,
       "priceBasis": "total",
       "availableDate": "2026-11-30",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -273,7 +273,7 @@
       "price": 2296,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -285,7 +285,7 @@
       "price": 2536,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -297,7 +297,7 @@
       "price": 2996,
       "priceBasis": "total",
       "availableDate": "2026-11-15",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -309,7 +309,7 @@
       "price": 2077,
       "priceBasis": "total",
       "availableDate": "2026-11-06",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-202-washington-dc-20002-24bkmpg/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -321,7 +321,7 @@
       "price": 2008,
       "priceBasis": "total",
       "availableDate": "2026-12-07",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-202-washington-dc-20002-24bkmpg/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -333,7 +333,7 @@
       "price": 2088,
       "priceBasis": "total",
       "availableDate": "2027-01-08",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-202-washington-dc-20002-24bkmpg/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -345,7 +345,7 @@
       "price": 2274,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-202-washington-dc-20002-24bkmpg/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -357,7 +357,7 @@
       "price": 2279,
       "priceBasis": "total",
       "availableDate": "2027-01-21",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-202-washington-dc-20002-24bkmpg/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -369,7 +369,7 @@
       "price": 2279,
       "priceBasis": "total",
       "availableDate": "2026-11-12",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-202-washington-dc-20002-24bkmpg/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -381,7 +381,7 @@
       "price": 2299,
       "priceBasis": "total",
       "availableDate": "2026-12-24",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-202-washington-dc-20002-24bkmpg/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -393,7 +393,7 @@
       "price": 1903,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -405,7 +405,7 @@
       "price": 2005,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -417,7 +417,7 @@
       "price": 2093,
       "priceBasis": "total",
       "availableDate": "2026-11-04",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -429,7 +429,7 @@
       "price": 2174,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -441,7 +441,7 @@
       "price": 2191,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -453,7 +453,7 @@
       "price": 2290,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -465,7 +465,7 @@
       "price": 2290,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -477,7 +477,7 @@
       "price": 2377,
       "priceBasis": "total",
       "availableDate": "2026-12-18",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -489,7 +489,7 @@
       "price": 2420,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -501,7 +501,7 @@
       "price": 2425,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -513,7 +513,7 @@
       "price": 2558,
       "priceBasis": "total",
       "availableDate": "2026-12-18",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -525,7 +525,7 @@
       "price": 2575,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -537,7 +537,7 @@
       "price": 2782,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -549,7 +549,7 @@
       "price": 2845,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/slate-at-noma-washington-dc-20002-25ecjhu/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -561,7 +561,7 @@
       "price": 2094,
       "priceBasis": "total",
       "availableDate": "2026-12-01",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -573,7 +573,7 @@
       "price": 2108,
       "priceBasis": "total",
       "availableDate": "2026-12-06",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -585,7 +585,7 @@
       "price": 2125,
       "priceBasis": "total",
       "availableDate": "2026-11-21",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -597,7 +597,7 @@
       "price": 2195,
       "priceBasis": "total",
       "availableDate": "2026-11-26",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -609,7 +609,7 @@
       "price": 2200,
       "priceBasis": "total",
       "availableDate": "2026-12-07",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -621,7 +621,7 @@
       "price": 2251,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -633,7 +633,7 @@
       "price": 2706,
       "priceBasis": "total",
       "availableDate": "2026-12-16",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -645,7 +645,7 @@
       "price": 2754,
       "priceBasis": "total",
       "availableDate": "2026-12-10",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -657,7 +657,7 @@
       "price": 2779,
       "priceBasis": "total",
       "availableDate": "2026-12-11",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -669,7 +669,7 @@
       "price": 2759,
       "priceBasis": "total",
       "availableDate": "2026-12-16",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -681,7 +681,7 @@
       "price": 2804,
       "priceBasis": "total",
       "availableDate": "2026-11-06",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -693,7 +693,7 @@
       "price": 2839,
       "priceBasis": "total",
       "availableDate": "2026-11-22",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -705,7 +705,7 @@
       "price": 5554,
       "priceBasis": "total",
       "availableDate": "2026-11-02",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -717,7 +717,7 @@
       "price": 1993,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -729,7 +729,7 @@
       "price": 2035,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -741,7 +741,7 @@
       "price": 1926,
       "priceBasis": "advertised",
       "availableDate": "2027-01-21",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -753,7 +753,7 @@
       "price": 1988,
       "priceBasis": "advertised",
       "availableDate": "2026-11-06",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -765,7 +765,7 @@
       "price": 2133,
       "priceBasis": "advertised",
       "availableDate": "2026-11-07",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -777,7 +777,7 @@
       "price": 2193,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -789,7 +789,7 @@
       "price": 2139,
       "priceBasis": "advertised",
       "availableDate": "2027-02-16",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -801,7 +801,7 @@
       "price": 2139,
       "priceBasis": "advertised",
       "availableDate": "2026-12-13",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -813,7 +813,7 @@
       "price": 2149,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -825,7 +825,7 @@
       "price": 2224,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -837,7 +837,7 @@
       "price": 2224,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -849,7 +849,7 @@
       "price": 2452,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -861,7 +861,7 @@
       "price": 2477,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -873,7 +873,7 @@
       "price": 2565,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -885,7 +885,7 @@
       "price": 2565,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -897,7 +897,7 @@
       "price": 2615,
       "priceBasis": "advertised",
       "availableDate": "2026-11-26",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -909,7 +909,7 @@
       "price": 2647,
       "priceBasis": "advertised",
       "availableDate": "2026-11-14",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -921,7 +921,7 @@
       "price": 2775,
       "priceBasis": "advertised",
       "availableDate": "2026-12-28",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -933,7 +933,7 @@
       "price": 2912,
       "priceBasis": "advertised",
       "availableDate": "2026-11-20",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -945,7 +945,7 @@
       "price": 1612,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-axis-washington-dc-20002-sm1e8h/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -957,7 +957,7 @@
       "price": 1742,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-axis-washington-dc-20002-sm1e8h/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -969,7 +969,7 @@
       "price": 1912,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-axis-washington-dc-20002-sm1e8h/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -981,7 +981,7 @@
       "price": 1982,
       "priceBasis": "total",
       "availableDate": "2026-11-29",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-axis-washington-dc-20002-sm1e8h/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -993,7 +993,7 @@
       "price": 1958,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-axis-washington-dc-20002-sm1e8h/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1005,7 +1005,7 @@
       "price": 1963,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-axis-washington-dc-20002-sm1e8h/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1017,7 +1017,7 @@
       "price": 2103,
       "priceBasis": "total",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-axis-washington-dc-20002-sm1e8h/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1029,7 +1029,7 @@
       "price": 1864,
       "priceBasis": "advertised",
       "availableDate": "2027-08-14",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1041,7 +1041,7 @@
       "price": 1880,
       "priceBasis": "advertised",
       "availableDate": "2026-11-05",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1053,7 +1053,7 @@
       "price": 2010,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1065,7 +1065,7 @@
       "price": 2048,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1077,7 +1077,7 @@
       "price": 1876,
       "priceBasis": "advertised",
       "availableDate": "2026-12-05",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1089,7 +1089,7 @@
       "price": 1912,
       "priceBasis": "advertised",
       "availableDate": "2027-01-08",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1101,7 +1101,7 @@
       "price": 1925,
       "priceBasis": "advertised",
       "availableDate": "2027-03-12",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1113,7 +1113,7 @@
       "price": 1943,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1125,7 +1125,7 @@
       "price": 2040,
       "priceBasis": "advertised",
       "availableDate": "2026-11-02",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1137,7 +1137,7 @@
       "price": 2060,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1149,7 +1149,7 @@
       "price": 2073,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1161,7 +1161,7 @@
       "price": 2092,
       "priceBasis": "advertised",
       "availableDate": "2026-12-25",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1173,7 +1173,7 @@
       "price": 2108,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1185,7 +1185,7 @@
       "price": 2200,
       "priceBasis": "advertised",
       "availableDate": "2026-12-17",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1197,7 +1197,7 @@
       "price": 2285,
       "priceBasis": "advertised",
       "availableDate": "2026-11-05",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1209,7 +1209,7 @@
       "price": 2307,
       "priceBasis": "advertised",
       "availableDate": "2026-11-05",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1221,7 +1221,7 @@
       "price": 2320,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1233,7 +1233,7 @@
       "price": 2367,
       "priceBasis": "advertised",
       "availableDate": "2026-11-21",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1245,7 +1245,7 @@
       "price": 2494,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1257,7 +1257,7 @@
       "price": 2503,
       "priceBasis": "advertised",
       "availableDate": "2027-01-05",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1269,7 +1269,7 @@
       "price": 2521,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1281,7 +1281,7 @@
       "price": 2970,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1293,7 +1293,7 @@
       "price": 3050,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1305,7 +1305,7 @@
       "price": 3216,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1317,7 +1317,7 @@
       "price": 3199,
       "priceBasis": "advertised",
       "availableDate": "2026-12-08",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/425-mass-washington-dc-20001-skdw8p/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1329,7 +1329,7 @@
       "price": 1930,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/reverb-washington-dc-20001-249hczp/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1341,7 +1341,7 @@
       "price": 1875,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/reverb-washington-dc-20001-249hczp/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1353,7 +1353,7 @@
       "price": 2115,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/reverb-washington-dc-20001-249hczp/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1365,7 +1365,7 @@
       "price": 2220,
       "priceBasis": "advertised",
       "availableDate": "2027-01-16",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/reverb-washington-dc-20001-249hczp/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1377,7 +1377,7 @@
       "price": 2270,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/reverb-washington-dc-20001-249hczp/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1389,7 +1389,7 @@
       "price": 2405,
       "priceBasis": "advertised",
       "availableDate": "2026-12-05",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/reverb-washington-dc-20001-249hczp/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1401,7 +1401,7 @@
       "price": 1833,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-shay-washington-dc-20001-wd9v5g/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1413,7 +1413,7 @@
       "price": 2009,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-shay-washington-dc-20001-wd9v5g/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1425,7 +1425,7 @@
       "price": 2295,
       "priceBasis": "advertised",
       "availableDate": "2026-12-20",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-shay-washington-dc-20001-wd9v5g/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1437,7 +1437,7 @@
       "price": 2063,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-shay-washington-dc-20001-wd9v5g/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1449,7 +1449,7 @@
       "price": 2063,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-shay-washington-dc-20001-wd9v5g/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1461,7 +1461,7 @@
       "price": 2077,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-shay-washington-dc-20001-wd9v5g/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1473,7 +1473,7 @@
       "price": 2089,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-shay-washington-dc-20001-wd9v5g/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1485,7 +1485,7 @@
       "price": 2094,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-shay-washington-dc-20001-wd9v5g/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1497,7 +1497,7 @@
       "price": 1846,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1509,7 +1509,7 @@
       "price": 2097,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1521,7 +1521,7 @@
       "price": 2097,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1533,7 +1533,7 @@
       "price": 2097,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1545,7 +1545,7 @@
       "price": 2107,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1557,7 +1557,7 @@
       "price": 2187,
       "priceBasis": "advertised",
       "availableDate": "2026-12-19",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1569,7 +1569,7 @@
       "price": 2217,
       "priceBasis": "advertised",
       "availableDate": "2026-12-15",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1581,7 +1581,7 @@
       "price": 2112,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1593,7 +1593,7 @@
       "price": 2190,
       "priceBasis": "advertised",
       "availableDate": null,
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1605,7 +1605,7 @@
       "price": 2287,
       "priceBasis": "advertised",
       "availableDate": "2026-12-10",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
       "sourceConfidence": "unit-level-advertisement"
     },
@@ -1617,7 +1617,7 @@
       "price": 2287,
       "priceBasis": "advertised",
       "availableDate": "2026-12-09",
-      "observedAt": "2026-11-01T17:01:58+00:00",
+      "observedAt": "2026-11-01T17:03:36+00:00",
       "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
       "sourceConfidence": "unit-level-advertisement"
     }
