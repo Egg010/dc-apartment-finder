@@ -40,6 +40,7 @@ jobs:
         run: |
           node --check enhancements.js
           node --check leasing.js
+          node --check jamie-commute.js
       - name: Research apartment sources and update price history
         run: python scripts/refresh_listings.py
       - name: Save dated public observations for later comparisons
@@ -74,7 +75,7 @@ jobs:
       - name: Build static website
         run: |
           mkdir -p _site/data
-          cp index.html enhancements.js enhancements.css leasing.js _site/
+          cp index.html enhancements.js enhancements.css leasing.js jamie-commute.js _site/
           cp data/live.json data/history.json data/alerts.json _site/data/
           touch _site/.nojekyll
       - name: Configure Pages
