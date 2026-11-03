@@ -1,27 +1,57 @@
 {
-  "generated": "2026-11-02T20:45:05+00:00",
+  "generated": "2026-11-03T18:24:51+00:00",
   "events": [
     {
-      "kind": "new-advertised-unit",
-      "building": "The 202",
-      "unit": "1116",
+      "kind": "unit-price-drop",
+      "building": "The Burton",
+      "unit": "1018",
       "plan": null,
-      "price": 2103,
+      "price": 1995,
+      "previousPrice": 2116,
+      "change": -121,
       "priceBasis": "total",
-      "observedAt": "2026-11-02T20:45:05+00:00",
-      "sourceUrl": "https://hotpads.com/the-202-washington-dc-20002-24bkmpg/pad",
-      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
+      "observedAt": "2026-11-03T18:24:51+00:00",
+      "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
+      "note": "Advertised price changed for same unit; confirm fees and February start."
     },
     {
-      "kind": "new-advertised-unit",
-      "building": "The Axis",
-      "unit": "623",
+      "kind": "unit-price-drop",
+      "building": "The Burton",
+      "unit": "0316",
       "plan": null,
-      "price": 2103,
+      "price": 2079,
+      "previousPrice": 2195,
+      "change": -116,
       "priceBasis": "total",
-      "observedAt": "2026-11-02T20:45:05+00:00",
-      "sourceUrl": "https://hotpads.com/the-axis-washington-dc-20002-sm1e8h/pad",
-      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
+      "observedAt": "2026-11-03T18:24:51+00:00",
+      "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
+      "note": "Advertised price changed for same unit; confirm fees and February start."
+    },
+    {
+      "kind": "unit-price-drop",
+      "building": "The Burton",
+      "unit": "1216",
+      "plan": null,
+      "price": 2084,
+      "previousPrice": 2200,
+      "change": -116,
+      "priceBasis": "total",
+      "observedAt": "2026-11-03T18:24:51+00:00",
+      "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
+      "note": "Advertised price changed for same unit; confirm fees and February start."
+    },
+    {
+      "kind": "unit-price-drop",
+      "building": "The Burton",
+      "unit": "0524",
+      "plan": null,
+      "price": 2125,
+      "previousPrice": 2236,
+      "change": -111,
+      "priceBasis": "total",
+      "observedAt": "2026-11-03T18:24:51+00:00",
+      "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
+      "note": "Advertised price changed for same unit; confirm fees and February start."
     }
   ]
 }
