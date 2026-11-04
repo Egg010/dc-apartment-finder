@@ -1,57 +1,27 @@
 {
-  "generated": "2026-11-03T18:24:51+00:00",
+  "generated": "2026-11-04T18:37:17+00:00",
   "events": [
     {
-      "kind": "unit-price-drop",
-      "building": "The Burton",
-      "unit": "1018",
+      "kind": "new-advertised-unit",
+      "building": "The Belgard",
+      "unit": "0707",
       "plan": null,
-      "price": 1995,
-      "previousPrice": 2116,
-      "change": -121,
+      "price": 2041,
       "priceBasis": "total",
-      "observedAt": "2026-11-03T18:24:51+00:00",
-      "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
-      "note": "Advertised price changed for same unit; confirm fees and February start."
+      "observedAt": "2026-11-04T18:37:17+00:00",
+      "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
+      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
     },
     {
-      "kind": "unit-price-drop",
-      "building": "The Burton",
-      "unit": "0316",
+      "kind": "new-advertised-unit",
+      "building": "Cielo",
+      "unit": "1124",
       "plan": null,
-      "price": 2079,
-      "previousPrice": 2195,
-      "change": -116,
-      "priceBasis": "total",
-      "observedAt": "2026-11-03T18:24:51+00:00",
-      "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
-      "note": "Advertised price changed for same unit; confirm fees and February start."
-    },
-    {
-      "kind": "unit-price-drop",
-      "building": "The Burton",
-      "unit": "1216",
-      "plan": null,
-      "price": 2084,
-      "previousPrice": 2200,
-      "change": -116,
-      "priceBasis": "total",
-      "observedAt": "2026-11-03T18:24:51+00:00",
-      "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
-      "note": "Advertised price changed for same unit; confirm fees and February start."
-    },
-    {
-      "kind": "unit-price-drop",
-      "building": "The Burton",
-      "unit": "0524",
-      "plan": null,
-      "price": 2125,
-      "previousPrice": 2236,
-      "change": -111,
-      "priceBasis": "total",
-      "observedAt": "2026-11-03T18:24:51+00:00",
-      "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
-      "note": "Advertised price changed for same unit; confirm fees and February start."
+      "price": 2161,
+      "priceBasis": "advertised",
+      "observedAt": "2026-11-04T18:37:17+00:00",
+      "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
+      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
     }
   ]
 }
