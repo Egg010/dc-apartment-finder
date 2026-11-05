@@ -1,26 +1,26 @@
 {
-  "generated": "2026-11-04T18:37:17+00:00",
+  "generated": "2026-11-05T18:42:16+00:00",
   "events": [
     {
       "kind": "new-advertised-unit",
-      "building": "The Belgard",
-      "unit": "0707",
+      "building": "Cielo",
+      "unit": "0245",
       "plan": null,
-      "price": 2041,
-      "priceBasis": "total",
-      "observedAt": "2026-11-04T18:37:17+00:00",
-      "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
+      "price": 1988,
+      "priceBasis": "advertised",
+      "observedAt": "2026-11-05T18:42:16+00:00",
+      "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
       "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
     },
     {
       "kind": "new-advertised-unit",
-      "building": "Cielo",
-      "unit": "1124",
+      "building": "The Florian",
+      "unit": "New510",
       "plan": null,
-      "price": 2161,
+      "price": 1918,
       "priceBasis": "advertised",
-      "observedAt": "2026-11-04T18:37:17+00:00",
-      "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
+      "observedAt": "2026-11-05T18:42:16+00:00",
+      "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
       "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
     }
   ]
