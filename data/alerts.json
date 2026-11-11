@@ -1,14 +1,25 @@
 {
-  "generated": "2026-11-10T18:40:07+00:00",
+  "generated": "2026-11-11T18:39:26+00:00",
   "events": [
     {
       "kind": "new-advertised-unit",
-      "building": "The Florian",
-      "unit": "New110",
+      "building": "The Burton",
+      "unit": "0818",
       "plan": null,
-      "price": 1886,
+      "price": 2064,
+      "priceBasis": "total",
+      "observedAt": "2026-11-11T18:39:26+00:00",
+      "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
+      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
+    },
+    {
+      "kind": "new-advertised-unit",
+      "building": "The Florian",
+      "unit": "New405",
+      "plan": null,
+      "price": 2014,
       "priceBasis": "advertised",
-      "observedAt": "2026-11-10T18:40:07+00:00",
+      "observedAt": "2026-11-11T18:39:26+00:00",
       "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
       "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
     }
