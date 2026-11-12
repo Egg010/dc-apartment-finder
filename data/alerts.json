@@ -1,27 +1,42 @@
 {
-  "generated": "2026-11-11T18:39:26+00:00",
+  "generated": "2026-11-12T18:52:43+00:00",
   "events": [
     {
       "kind": "new-advertised-unit",
-      "building": "The Burton",
-      "unit": "0818",
+      "building": "The 202",
+      "unit": "1319",
       "plan": null,
-      "price": 2064,
+      "price": 2168,
       "priceBasis": "total",
-      "observedAt": "2026-11-11T18:39:26+00:00",
-      "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
+      "observedAt": "2026-11-12T18:52:43+00:00",
+      "sourceUrl": "https://hotpads.com/the-202-washington-dc-20002-24bkmpg/pad",
       "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
     },
     {
-      "kind": "new-advertised-unit",
-      "building": "The Florian",
-      "unit": "New405",
+      "kind": "unit-price-drop",
+      "building": "The Burton",
+      "unit": "1018",
       "plan": null,
-      "price": 2014,
-      "priceBasis": "advertised",
-      "observedAt": "2026-11-11T18:39:26+00:00",
-      "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
-      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
+      "price": 1870,
+      "previousPrice": 1986,
+      "change": -116,
+      "priceBasis": "total",
+      "observedAt": "2026-11-12T18:52:43+00:00",
+      "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
+      "note": "Advertised price changed for same unit; confirm fees and February start."
+    },
+    {
+      "kind": "unit-price-drop",
+      "building": "The Burton",
+      "unit": "0524",
+      "plan": null,
+      "price": 1986,
+      "previousPrice": 2125,
+      "change": -139,
+      "priceBasis": "total",
+      "observedAt": "2026-11-12T18:52:43+00:00",
+      "sourceUrl": "https://hotpads.com/the-burton-washington-dc-20002-249j70w/pad",
+      "note": "Advertised price changed for same unit; confirm fees and February start."
     }
   ]
 }
