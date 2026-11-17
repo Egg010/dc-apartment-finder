@@ -1,4 +1,16 @@
 {
-  "generated": "2026-11-16T20:59:23+00:00",
-  "events": []
+  "generated": "2026-11-17T19:49:08+00:00",
+  "events": [
+    {
+      "kind": "new-advertised-unit",
+      "building": "The Axis",
+      "unit": "New604",
+      "plan": null,
+      "price": 1958,
+      "priceBasis": "total",
+      "observedAt": "2026-11-17T19:49:08+00:00",
+      "sourceUrl": "https://hotpads.com/the-axis-washington-dc-20002-sm1e8h/pad",
+      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
+    }
+  ]
 }
