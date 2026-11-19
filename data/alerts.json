@@ -1,16 +1,4 @@
 {
-  "generated": "2026-11-18T19:23:15+00:00",
-  "events": [
-    {
-      "kind": "new-advertised-unit",
-      "building": "Cielo",
-      "unit": "0231",
-      "plan": null,
-      "price": 2122,
-      "priceBasis": "advertised",
-      "observedAt": "2026-11-18T19:23:15+00:00",
-      "sourceUrl": "https://hotpads.com/cielo-washington-dc-20002-24maept/pad",
-      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
-    }
-  ]
+  "generated": "2026-11-19T19:28:20+00:00",
+  "events": []
 }
