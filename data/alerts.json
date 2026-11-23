@@ -1,4 +1,38 @@
 {
-  "generated": "2026-11-22T18:28:47+00:00",
-  "events": []
+  "generated": "2026-11-23T22:36:52+00:00",
+  "events": [
+    {
+      "kind": "new-advertised-unit",
+      "building": "Loree Grand at Union Place",
+      "unit": "0107",
+      "plan": null,
+      "price": 1888,
+      "priceBasis": "advertised",
+      "observedAt": "2026-11-23T22:36:52+00:00",
+      "sourceUrl": "https://hotpads.com/loree-grand-at-union-place-washington-dc-20002-skyqtt/pad",
+      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
+    },
+    {
+      "kind": "new-advertised-unit",
+      "building": "Loree Grand at Union Place",
+      "unit": "0311",
+      "plan": null,
+      "price": 1958,
+      "priceBasis": "advertised",
+      "observedAt": "2026-11-23T22:36:52+00:00",
+      "sourceUrl": "https://hotpads.com/loree-grand-at-union-place-washington-dc-20002-skyqtt/pad",
+      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
+    },
+    {
+      "kind": "new-advertised-unit",
+      "building": "Loree Grand at Union Place",
+      "unit": "0514",
+      "plan": null,
+      "price": 1973,
+      "priceBasis": "advertised",
+      "observedAt": "2026-11-23T22:36:52+00:00",
+      "sourceUrl": "https://hotpads.com/loree-grand-at-union-place-washington-dc-20002-skyqtt/pad",
+      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
+    }
+  ]
 }
