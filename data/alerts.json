@@ -1,38 +1,18 @@
 {
-  "generated": "2026-11-23T22:36:52+00:00",
+  "generated": "2026-11-24T21:08:47+00:00",
   "events": [
     {
-      "kind": "new-advertised-unit",
-      "building": "Loree Grand at Union Place",
-      "unit": "0107",
+      "kind": "unit-price-drop",
+      "building": "The Belgard",
+      "unit": "0827",
       "plan": null,
-      "price": 1888,
-      "priceBasis": "advertised",
-      "observedAt": "2026-11-23T22:36:52+00:00",
-      "sourceUrl": "https://hotpads.com/loree-grand-at-union-place-washington-dc-20002-skyqtt/pad",
-      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
-    },
-    {
-      "kind": "new-advertised-unit",
-      "building": "Loree Grand at Union Place",
-      "unit": "0311",
-      "plan": null,
-      "price": 1958,
-      "priceBasis": "advertised",
-      "observedAt": "2026-11-23T22:36:52+00:00",
-      "sourceUrl": "https://hotpads.com/loree-grand-at-union-place-washington-dc-20002-skyqtt/pad",
-      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
-    },
-    {
-      "kind": "new-advertised-unit",
-      "building": "Loree Grand at Union Place",
-      "unit": "0514",
-      "plan": null,
-      "price": 1973,
-      "priceBasis": "advertised",
-      "observedAt": "2026-11-23T22:36:52+00:00",
-      "sourceUrl": "https://hotpads.com/loree-grand-at-union-place-washington-dc-20002-skyqtt/pad",
-      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
+      "price": 2169,
+      "previousPrice": 2274,
+      "change": -105,
+      "priceBasis": "total",
+      "observedAt": "2026-11-24T21:08:47+00:00",
+      "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
+      "note": "Advertised price changed for same unit; confirm fees and February start."
     }
   ]
 }
