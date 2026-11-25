@@ -1,18 +1,4 @@
 {
-  "generated": "2026-11-24T21:08:47+00:00",
-  "events": [
-    {
-      "kind": "unit-price-drop",
-      "building": "The Belgard",
-      "unit": "0827",
-      "plan": null,
-      "price": 2169,
-      "previousPrice": 2274,
-      "change": -105,
-      "priceBasis": "total",
-      "observedAt": "2026-11-24T21:08:47+00:00",
-      "sourceUrl": "https://hotpads.com/the-belgard-washington-dc-20002-249hdmj/pad",
-      "note": "Advertised price changed for same unit; confirm fees and February start."
-    }
-  ]
+  "generated": "2026-11-25T20:27:27+00:00",
+  "events": []
 }
