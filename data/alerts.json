@@ -1,4 +1,16 @@
 {
-  "generated": "2026-11-25T20:27:27+00:00",
-  "events": []
+  "generated": "2026-11-26T20:08:36+00:00",
+  "events": [
+    {
+      "kind": "new-advertised-unit",
+      "building": "The Florian",
+      "unit": "New911",
+      "plan": null,
+      "price": 2153,
+      "priceBasis": "advertised",
+      "observedAt": "2026-11-26T20:08:36+00:00",
+      "sourceUrl": "https://hotpads.com/the-florian-washington-dc-20002-23z8r3b/pad",
+      "note": "New sub-$2,200 advertised 1BR base/total price, NOT verified all-in or Feb-compatible."
+    }
+  ]
 }
